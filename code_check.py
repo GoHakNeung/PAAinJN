@@ -276,7 +276,6 @@ def code_check(py) :
       answer = test_set[i]['answer']
       global question
       question = test_set[i]['question']   
-  trial_error_count[py] += 1    
   try : 
     code_arrange(py)
   except : 
