@@ -18,7 +18,7 @@ question_1 ='''<h2 style = "background-color:yellow; ">Description</h2>
 <p>acute</p>
 </div>
 '''
-answer_1 = [
+test_set_1 = [
     {'input' : [[1]], 'output' : ['acute']},
     {'input' : [[89]], 'output' : ['acute']},
     {'input' : [[90]], 'output' : ['right']},
@@ -26,6 +26,6 @@ answer_1 = [
     {'input' : [[179]], 'output' : ['obtuse']}
 ]
 
-test_set = [
-    {'test_file' : '_1.py', 'answer' : answer_1, 'question' : question_1}
-}
+meta_data = [
+    {'test_file' : '_1.py', 'answer' : test_set_1, 'question' : question_1}
+]
