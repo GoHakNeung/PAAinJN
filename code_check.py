@@ -1,11 +1,9 @@
-#@title
 import sys, random, math, os, traceback
 import pandas as pd
 from IPython.core.display import display, HTML
 from PAAinJN.problem import *
 
 #------------------------------------------------------------------------------#
-#출력할 때 글씨 색
 reset = '\033[0m'
 tc_red = '\033[38;2;255;0;0m'
 tc_green = '\033[38;2;0;255;0m'
@@ -143,56 +141,56 @@ def error_line() :
   return int(line[line.find('e')+2:])-4
 #------------------------------------------------------------------------------#
 def name_error(test_py) : 
-  print(error_line(), '번째 줄에 변수 또는 명령어 이름을 확인하거나, 문자열에 따옴표가 붙어 있는지 확인하세요.')
+  print(error_line(), 'line. Check the name of the variable or command, or make sure that the string is quoted.')
   print("="*40)
   code_print(test_py)
 
 def type_error(test_py) : 
-  print(error_line(), '번째 줄에 숫자나 문자를 바르게 입력했나요?')
-  print('또는 ()안에 알맞은 숫자를 입력했나요?')
+  print('Did you type the correct number or letter?')
+  print('Or did you input the correct number in ()?')
   print("="*40)
-  code_print(test_py)
+  code_print_syntax(test_py)
 
 def attribute_error(test_py) : 
-  print(error_line(), '번째 줄에 라이브러리의 속성 또는 메서드를 바르게 입력했나요?')
+  print(error_line(), 'line. Did you enter properties or methods for the library?')
   print("="*40)
   code_print(test_py)
 
 def value_error(test_py) : 
-  print(error_line(), '번째 줄에 숫자나 문자, 입력을 바르게 입력했나요?')
+  print(error_line(), 'line. Did you enter the correct number, letter, or input?')
   print("="*40)
   code_print(test_py)
 
 def index_error(test_py) : 
-  print(error_line(), '번째 줄에 리스트나 튜플의 길이를 확인해주세요.')
+  print(error_line(), 'line. Please check the length of the list or tuple.')
   print("="*40)
   code_print(test_py)
 
 def indentation_error(test_py) :   
-  print(error_line(), '번째 줄에 띄어쓰기를 확인해주세요.')     
+  print(error_line(), 'line. Please check the spacing.')     
   print("="*40)
   code_print(test_py)  
 
 def zerodivision_error(test_py) :   
-  print(error_line(), '번째 줄에 숫자를 0으로 나누면 안되요.')           
+  print(error_line(), 'line. You can\'t divide a number by zero.')           
   print("="*40)
   code_print(test_py)
 
 def overflow_error(test_py) :  
-  print(error_line(), '번째 줄에 너무 큰 수는 표현할 수 없어요')
+  print(error_line(), 'line. A big number can\'t be expressed.')
   print("="*40)
   code_print(test_py)
 
 def keyboard_interrupt(test_py) : 
-  print('사용자가 작동 정지함.')
+  print('User stopped working.')
 
 def syntax_error(test_py) : 
-  print('문법오류입니다. "명령어", ":", "()"를 확인하세요')
+  print('It\'s a grammatical error. Check "command", ":", "()"')
   print("="*40)
   code_print_syntax(test_py)
 
 def modulenotfound_error(test_py) :  
-  print(error_line(), '번째 줄에 라이브러리를 확인해주세요.')
+  print(error_line(), 'line. Please check the library.')
   print("="*40)
   code_print(test_py)
 
@@ -268,7 +266,7 @@ def error_check(test_py) :
     return
 
 #------------------------------------------------------------------------------#
-#코드의 정답 여부를 확인하는 함수
+
 def code_check(py) :
   for i in range(len(test_set)) :
     if test_set[i]['test_file'] == py :
@@ -279,14 +277,14 @@ def code_check(py) :
   try : 
     code_arrange(py)
   except : 
-    print('평가 코드를 생성하세요.')
+    print('Generate an assessment code.')
     return
   if code_input_count : 
     if code_input_count != len(answer[0]['input']) :         
-      print('입력을 확인해주세요.')
+      print('Please check the input.')
       return
 
-  Question('<h2 style = "background-color:yellow">결과 확인</h2>')  
+  Question('<h2 style = "background-color:yellow">Check the results</h2>')  
 
   global test_count
   for test_count in range(len(answer)) : 
@@ -306,14 +304,14 @@ def code_check(py) :
     #입력이 없는 문제
     if len(answer[0]['input']) == 0 : 
       if result[test_count] == True : 
-        Question('<li>처리한 데이터 : </li>') 
+        Question('<li>Processed Data : </li>') 
         for i in user_answer : 
           if i == user_answer[-1] : 
             print(bc_yellow+str(i)+reset,tc_green+'O'+reset)
           else : 
             print(bc_yellow+str(i)+reset)
       else :
-        Question('<li>처리한 데이터 : </li>') 
+        Question('<li>Processed Data : </li>') 
         for i in user_answer : 
           if i == user_answer[-1] : 
             print(bc_yellow+str(i)+reset, tc_red+'X'+reset)
@@ -322,7 +320,7 @@ def code_check(py) :
     else :  
     #입력이 있는 문제
       if result[test_count] == True : 
-        Question('<li>입력한 데이터 : </li>') 
+        Question('<li>Inputted Data : </li>') 
         for i in answer[test_count]['input'] :    
           if len(i) == 1 : 
             print(i[0])
@@ -334,14 +332,14 @@ def code_check(py) :
                 print(j, end = ' ')              
 
         # for i in answer[test_count]['input'] : print(i)
-        Question('<li>처리한 데이터 : </li>') 
+        Question('<li>Processed Data : </li>') 
         for i in user_answer : 
           if i == user_answer[-1] : 
             print(bc_yellow+str(i)+reset, tc_green+'O'+reset)
           else : 
             print(bc_yellow+str(i)+reset)
       else : 
-        Question('<li>입력한 데이터 : </li>') 
+        Question('<li>Inputted Data : </li>') 
         for i in answer[test_count]['input'] :    
           if len(i) == 1 : 
             print(i[0])
@@ -352,7 +350,7 @@ def code_check(py) :
               else : 
                 print(j, end = ' ')              
 
-        Question('<li>처리한 데이터 : </li>') 
+        Question('<li>Processed Data : </li>') 
         for i in user_answer : 
           if i == user_answer[-1] : 
             print(bc_yellow+str(i)+reset,tc_red+'X'+reset)
@@ -361,11 +359,11 @@ def code_check(py) :
     Question('<HR>')
   if sum(result) == test_count+1 :
     try : 
-      print(tc_green+'정답입니다.'+reset)
+      print(tc_green+'Right Answer'+reset)
     except : 
-      print(tc_green+'정답입니다.'+reset)
+      print(tc_green+'Right Answer'+reset)
   else : 
     try : 
-      print(tc_red+'틀렸습니다.'+reset)
+      print(tc_red+'Wrong Answer'+reset)
     except : 
-      print(tc_red+'틀렸습니다.'+reset)
+      print(tc_red+'Wrong Answer'+reset)
