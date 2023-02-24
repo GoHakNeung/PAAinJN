@@ -26,3 +26,7 @@ answer_1 = [
     {'input' : [[91]], 'output' : ['obtuse']},
     {'input' : [[179]], 'output' : ['obtuse']}
 ]
+
+test_set = [
+    {'test_file' : '_1.py', 'answer' : answer_1, 'question' : question_1}
+}
