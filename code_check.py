@@ -268,12 +268,12 @@ def error_check(test_py) :
 #------------------------------------------------------------------------------#
 
 def code_check(py) :
-  for i in range(len(test_set)) :
-    if test_set[i]['test_file'] == py :
+  for i in range(len(meta_data)) :
+    if meta_data[i]['test_file'] == py :
       global answer 
-      answer = test_set[i]['answer']
+      answer = meta_data[i]['answer']
       global question
-      question = test_set[i]['question']   
+      question = meta_data[i]['question']   
   try : 
     code_arrange(py)
   except : 
