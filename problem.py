@@ -18,7 +18,6 @@ question_1 ='''<h2 style = "background-color:yellow; ">Description</h2>
 <p>acute</p>
 </div>
 '''
-img_1 = "https://github.com/GoHakNeung/python/blob/main/img_4201.jpg?raw=true"
 answer_1 = [
     {'input' : [[1]], 'output' : ['acute']},
     {'input' : [[89]], 'output' : ['acute']},
