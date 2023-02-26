@@ -38,8 +38,8 @@ test_set_2 = [
     {'input' : [], 'output' : ['Hello World']},
 ]
 
-question_3 ='''Hello\n 
-World 출력 
+question_3 ='''<p>Hello</p>
+<p>World 출력 </p>
 '''
 test_set_3 = [
     {'input' : [], 'output' : ['Hello', 'World']},
@@ -51,12 +51,12 @@ test_set_4 = [
     {'input' : [], 'output' : ['"C:\Download\Hello.cpp"']},
 ]
 
-question_5 ='''#include<studio.h>
-main()
-{
-    print("Hello World\n")
-    
-}출력 
+question_5 ='''<p>#include<studio.h></p>
+<p>main()</p>
+<p>{</p>
+<p>    print("Hello World\n")</p>
+<p>}</p>
+<p>출력 </p>
 '''
 test_set_5 = [
     {'input' : [], 'output' : ['#include<studio.h>', 'main()', '{', '    print("Hello World\n")', '}']},
