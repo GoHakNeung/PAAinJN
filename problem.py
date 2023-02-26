@@ -26,14 +26,49 @@ test_set_0 = [
     {'input' : [[179]], 'output' : ['obtuse']}
 ]
 
-question_1 ='''"Hello" 출력 
+question_1 ='''Hello 출력 
 '''
 test_set_1 = [
     {'input' : [], 'output' : ['Hello']},
-
 ]
+
+question_2 ='''Hello World 출력 
+'''
+test_set_2 = [
+    {'input' : [], 'output' : ['Hello World']},
+]
+
+question_3 ='''Hello 
+World 출력 
+'''
+test_set_3 = [
+    {'input' : [], 'output' : ['Hello\nWorld']},
+]
+
+question_4 ='''"C:\Download\hello.cpp" 출력 
+'''
+test_set_4 = [
+    {'input' : [], 'output' : ['"C:\Downlad\Hello.cpp"']},
+]
+
+question_5 ='''#include<studio.h>
+main()
+{
+    print("Hello World\n")
+    
+}출력 
+'''
+test_set_5 = [
+    {'input' : [], 'output' : ['#include<studio.h>', 'main()', '{', '    print("Hello World\n")', '}']},
+]
+
+
 
 meta_data = [
     {'test_file' : '_0.py', 'answer' : test_set_0, 'question' : question_0},    
-    {'test_file' : '_1.py', 'answer' : test_set_1, 'question' : question_1}
+    {'test_file' : '_1.py', 'answer' : test_set_1, 'question' : question_1},
+    {'test_file' : '_2.py', 'answer' : test_set_2, 'question' : question_2},
+    {'test_file' : '_3.py', 'answer' : test_set_3, 'question' : question_3},
+    {'test_file' : '_4.py', 'answer' : test_set_4, 'question' : question_4},
+    {'test_file' : '_5.py', 'answer' : test_set_5, 'question' : question_5},
 ]
