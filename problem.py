@@ -38,11 +38,11 @@ test_set_2 = [
     {'input' : [], 'output' : ['Hello World']},
 ]
 
-question_3 ='''Hello 
+question_3 ='''Hello\n 
 World 출력 
 '''
 test_set_3 = [
-    {'input' : [], 'output' : ['Hello\nWorld']},
+    {'input' : [], 'output' : ['Hello', 'World']},
 ]
 
 question_4 ='''"C:\Download\hello.cpp" 출력 
