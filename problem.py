@@ -45,10 +45,10 @@ test_set_3 = [
     {'input' : [], 'output' : ['Hello', 'World']},
 ]
 
-question_4 ='''"C:\Download\hello.cpp" 출력 
+question_4 ='''"C:\Download\Hello.cpp" 출력 
 '''
 test_set_4 = [
-    {'input' : [], 'output' : ['"C:\Downlad\Hello.cpp"']},
+    {'input' : [], 'output' : ['"C:\Download\Hello.cpp"']},
 ]
 
 question_5 ='''#include<studio.h>
