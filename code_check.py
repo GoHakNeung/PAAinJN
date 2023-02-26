@@ -87,7 +87,7 @@ def code_test(answer_input) :
   lines = f.readlines()
 
   for line in lines :  
-    line = line.strip()
+    line = line.rstrip('\n')
     if line != '' : 
       user_answer.append(str(line))
   f.close()
