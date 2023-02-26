@@ -54,7 +54,7 @@ test_set_4 = [
 question_5 ='''<p>#include<studio.h></p>
 <p>main()</p>
 <p>{</p>
-<p>    print("Hello World\n")</p>
+<p>\t\tprint("Hello World\n")</p>
 <p>}</p>
 <p>출력 </p>
 '''
