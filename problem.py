@@ -1,4 +1,4 @@
-question_1 ='''<h2 style = "background-color:yellow; ">Description</h2>
+question_0 ='''<h2 style = "background-color:yellow; ">Description</h2>
 <p>Let's create a program to print out whether <span style = "background-color : #E0E0E0">one number</span> you inputted is obtuse, right, or acute.</p>
 <HR>
 <h2> input
@@ -18,7 +18,7 @@ question_1 ='''<h2 style = "background-color:yellow; ">Description</h2>
 <p>acute</p>
 </div>
 '''
-test_set_1 = [
+test_set_0 = [
     {'input' : [[1]], 'output' : ['acute']},
     {'input' : [[89]], 'output' : ['acute']},
     {'input' : [[90]], 'output' : ['right']},
@@ -26,6 +26,14 @@ test_set_1 = [
     {'input' : [[179]], 'output' : ['obtuse']}
 ]
 
+question_1 ='''"Hello" 출력 
+'''
+test_set_1 = [
+    {'input' : [], 'output' : ['Hello']},
+
+]
+
 meta_data = [
+    {'test_file' : '_0.py', 'answer' : test_set_0, 'question' : question_0},    
     {'test_file' : '_1.py', 'answer' : test_set_1, 'question' : question_1}
 ]
