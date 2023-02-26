@@ -59,7 +59,7 @@ question_5 ='''<p>#include<studio.h></p>
 <p>출력 </p>
 '''
 test_set_5 = [
-    {'input' : [], 'output' : ['#include<studio.h>', 'main()', '{', '    print("Hello World\n")', '}']},
+    {'input' : [], 'output' : ['#include<studio.h>', 'main()', '{', '    print("Hello World\\n")', '}']},
 ]
 
 
