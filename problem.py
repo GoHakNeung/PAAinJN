@@ -48,13 +48,13 @@ test_set_3 = [
 question_4 ='''"C:\Download\Hello.cpp" 출력 
 '''
 test_set_4 = [
-    {'input' : [], 'output' : ['"C:\Download\Hello.cpp"']},
+    {'input' : [], 'output' : ['"C:\\Download\\Hello.cpp"']},
 ]
 
 question_5 ='''<p>#include<studio.h></p>
 <p>main()</p>
 <p>{</p>
-<p>\t\tprint("Hello World\n")</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;print("Hello World\n")</p>
 <p>}</p>
 <p>출력 </p>
 '''
