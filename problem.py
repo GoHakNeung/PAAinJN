@@ -231,7 +231,48 @@ test_set_24 = [
     {'input' : [[68]], 'output' : [11]},
     {'input' : [[25]], 'output' : [6]},
 ]
-#7번까지 함
+
+
+question_25 = '''1~10 사이 정수를 입력받으며 1부터 그 숫자까지 공백을 두고 출력하며 3,6,9에는 X(대문자)를 출력한다.
+'''
+test_set_25 = [
+    {'input' : [[9]], 'output' : ['1 2 X 4 5 X 7 8 X']},
+    {'input' : [[5]], 'output' : ['1 2 X 4 5']},
+    {'input' : [[2]], 'output' : ['1 2']},
+]
+
+question_26 = '''rgb, 3 3 3은 r을 0 ~2, g는 0~2, b는 0 ~ 2를 표시할 수 있다. 
+입력은 공백을 두고 입력된다. 출력은 공백을 안 둠.
+'''
+test_set_26 = [
+    {'input' : [['2 2 2']], 'output' : [000, 001, 010, 100, 100, 101, 110, 111]},
+    {'input' : [['1 2 1']], 'output' : [000, 010]},
+    {'input' : [['3 2 1']], 'output' : [000, 010, 100, 110, 200, 210]},
+]
+
+question_27 = '''정수 1개를 입력 받는다. 입력받은 숫자까지 출력을 하지만 3의 배수는 출력하지 안흔다. 
+'''
+test_set_27 = [
+    {'input' : [[10]], 'output' : [1, 2, 4, 5, 7, 8, 10]},
+    {'input' : [[5]], 'output' : [1, 2, 4, 5]},
+    {'input' : [[15]], 'output' : [1, 2, 4, 5, 7, 8, 10, 11, 13, 14]},
+]
+
+question_28 = '''등차수열 세 숫자가 공백을 두고 입력된다. 차례대로 시작값, 등차의 값, 몇 번째 수인지
+'''
+test_set_28 = [
+    {'input' : [['1 3 5']], 'output' : [13]},
+    {'input' : [['5 3 5']], 'output' : [17]},
+    {'input' : [['99 -1 6']], 'output' : [94]},
+]
+
+question_29 = '''최대 공약수 두 수는 공백을 두고 입력 됨
+'''
+test_set_29 = [
+    {'input' : [['64 128']], 'output' : [64]},
+    {'input' : [['39 26']], 'output' : [13]},
+    {'input' : [['2 9']], 'output' : [1]},
+]
 
 meta_data = [
     {'test_file' : '_0.py', 'answer' : test_set_0, 'question' : question_0},    
@@ -252,4 +293,16 @@ meta_data = [
     {'test_file' : '_15.py', 'answer' : test_set_15, 'question' : question_15},
     {'test_file' : '_16.py', 'answer' : test_set_16, 'question' : question_16},
     {'test_file' : '_17.py', 'answer' : test_set_17, 'question' : question_17},  
+    {'test_file' : '_18.py', 'answer' : test_set_18, 'question' : question_18},
+    {'test_file' : '_19.py', 'answer' : test_set_19, 'question' : question_19},
+    {'test_file' : '_20.py', 'answer' : test_set_20, 'question' : question_20},
+    {'test_file' : '_21.py', 'answer' : test_set_21, 'question' : question_21},
+    {'test_file' : '_22.py', 'answer' : test_set_22, 'question' : question_22},
+    {'test_file' : '_23.py', 'answer' : test_set_23, 'question' : question_23},
+    {'test_file' : '_24.py', 'answer' : test_set_24, 'question' : question_24},
+    {'test_file' : '_25.py', 'answer' : test_set_25, 'question' : question_25},
+    {'test_file' : '_26.py', 'answer' : test_set_26, 'question' : question_26},
+    {'test_file' : '_27.py', 'answer' : test_set_27, 'question' : question_27},      
+    {'test_file' : '_28.py', 'answer' : test_set_28, 'question' : question_28},
+    {'test_file' : '_29.py', 'answer' : test_set_29, 'question' : question_29},    
 ]
