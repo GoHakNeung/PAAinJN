@@ -165,6 +165,73 @@ test_set_17 = [
     {'input' : [['-4 -9 0']], 'output' : [-13, -13/3]},  
 ]
 
+## 순차, 반복, 조건
+question_18 = '''두 정수가 공백을 두고 입력된다. a가 b보다 크면 1 그렇지 않으면 0
+'''
+test_set_18 = [
+    {'input' : [['1 2']], 'output' : [0]},
+    {'input' : [['15323 12']], 'output' : [1]},
+    {'input' : [['-4561 -456']], 'output' : [0]},  
+]
+
+question_19 = '''두 정수가 공백을 두고 입력된다. a와 b가 다른 경우 1, 그렇지 않은 경우 0을 출력한다.
+'''
+test_set_19 = [
+    {'input' : [['1 2']], 'output' : [1]},
+    {'input' : [['15323 12']], 'output' : [1]},
+    {'input' : [['-4561 -4561']], 'output' : [0]},
+    {'input' : [['12 12']], 'output' : [0]},
+    {'input' : [['-4561 0']], 'output' : [1]},    
+]
+
+question_20 = '''정수 하나가 입력된다. 100~90 A, 89~70 B, 69~40 C, 39~0 D
+'''
+test_set_20 = [
+    {'input' : [[73]], 'output' : ['B']},
+    {'input' : [[99]], 'output' : ['A']},
+    {'input' : [[53]], 'output' : ['C']},
+    {'input' : [[1]], 'output' : ['D']},
+    {'input' : [[71]], 'output' : ['B']},    
+]
+
+question_21 = '''1~12 입력, 봄-여름-가을-겨울 출력
+'''
+test_set_21 = [
+    {'input' : [[12]], 'output' : ['winter']},
+    {'input' : [[2]], 'output' : ['winter']},
+    {'input' : [[3]], 'output' : ['spring']},
+    {'input' : [[5]], 'output' : ['spring']},
+    {'input' : [[6]], 'output' : ['summer']},    
+    {'input' : [[8]], 'output' : ['summer']},        
+    {'input' : [[9]], 'output' : ['fall']},    
+    {'input' : [[11]], 'output' : ['fall']},    
+]
+
+question_22 = '''정수 하나 입력, 카운트 다운(정수부터 1까지)
+'''
+test_set_22 = [
+    {'input' : [[12]], 'output' : [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]},
+    {'input' : [[5]], 'output' : [5, 4, 3, 2, 1]},
+    {'input' : [[3]], 'output' : [3, 2, 1]},
+    {'input' : [[1]], 'output' : [1]},
+]
+
+question_23 = '''1부터 입력된 수까지의 수 중에서 짝수의 합을 출력한다.
+'''
+test_set_23 = [
+    {'input' : [[6]], 'output' : [12]},
+    {'input' : [[80]], 'output' : [1640]},
+    {'input' : [[49]], 'output' : [600]},
+]
+
+question_24 = '''1,2,3,4,5... 계속 더해가다가 입력된 정수와 같거나 커졌을 때, 마지막에 더한 정수를 출력한다.
+'''
+test_set_24 = [
+    {'input' : [[55]], 'output' : [10]},
+    {'input' : [[68]], 'output' : [11]},
+    {'input' : [[25]], 'output' : [6]},
+]
+#7번까지 함
 
 meta_data = [
     {'test_file' : '_0.py', 'answer' : test_set_0, 'question' : question_0},    
