@@ -274,6 +274,14 @@ test_set_29 = [
     {'input' : [['2 9']], 'output' : [1]},
 ]
 
+question_30 = '''정수 1개가 입력됨. n*n 배열에 1씩 커지도록
+'''
+test_set_30= [
+    {'input' : [[4]], 'output' : ['1 2 3 4', '5 6 7 8', '9 10 11 12', '13 14 15 16']},
+    {'input' : [[3]], 'output' : ['1 2 3', '4 5 6', '7 8 9']},
+    {'input' : [[5]], 'output' : ['1 2 3 4 5', '6 7 8 9 10', '11 12 13 14 15', '16 17 18 19 20', '21 22 23 24 25']}
+]
+
 meta_data = [
     {'test_file' : '_0.py', 'answer' : test_set_0, 'question' : question_0},    
     {'test_file' : '_1.py', 'answer' : test_set_1, 'question' : question_1},
@@ -305,4 +313,5 @@ meta_data = [
     {'test_file' : '_27.py', 'answer' : test_set_27, 'question' : question_27},      
     {'test_file' : '_28.py', 'answer' : test_set_28, 'question' : question_28},
     {'test_file' : '_29.py', 'answer' : test_set_29, 'question' : question_29},    
+    {'test_file' : '_30.py', 'answer' : test_set_30, 'question' : question_30},        
 ]
