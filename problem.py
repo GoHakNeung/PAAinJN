@@ -2192,7 +2192,7 @@ question_8000 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
 <p>label, 백분율이 표시되고 세종시가 강조된 원 그래프</p>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8000.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8000.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8000 = ''
@@ -2213,7 +2213,7 @@ img_8002 = ''
 question_review_8002 = ''' 
 '''
 answer_8002 = [
-    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/jupyter_judge/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_scatter=plt.scatter(df['x'],df['y'])",'A_xlim=plt.xlim(0,100)','A_ylim=plt.ylim(0,100)',"A_title=plt.title('x,y의 산점도')", 'plt.show()']}
+    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/PAAinJN/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_scatter=plt.scatter(df['x'],df['y'])",'A_xlim=plt.xlim(0,100)','A_ylim=plt.ylim(0,100)',"A_title=plt.title('x,y의 산점도')", 'plt.show()']}
 ]
 
 question_8003 = '''hist
@@ -2222,7 +2222,7 @@ img_8003 = ''
 question_review_8003 = ''' 
 '''
 answer_8003 = [
-    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/jupyter_judge/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_hist=plt.hist(df['x'])",'A_title=plt.title("히스토그램")', 'plt.show()']}
+    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/PAAinJN/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_hist=plt.hist(df['x'])",'A_title=plt.title("히스토그램")', 'plt.show()']}
 ]
 
 question_8004 = '''boxplot
@@ -2231,7 +2231,7 @@ img_8004 = ''
 question_review_8004 = ''' 
 '''
 answer_8004 = [
-    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/jupyter_judge/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_boxplot=plt.boxplot(df['x'])",'A_title=plt.title("박스플롯")', 'plt.show()']}
+    {'input' : [[10]], 'output' : ["df = pd.read_csv('/content/PAAinJN/csv_file/scatter1.csv')",'plt.subplot(1,2,2)',"A_boxplot=plt.boxplot(df['x'])",'A_title=plt.title("박스플롯")', 'plt.show()']}
 ]
 
 
@@ -2293,7 +2293,7 @@ question_8009 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
 <p>막대그래프와 꺾은선그래프가 동시에 표현된 그래프</p>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8009.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8009.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8009 = ''
@@ -2405,7 +2405,7 @@ question_8203 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <p>세로축 이름 : 최고기온</p>
 <p>세로축 범위 : 0 ~ 35</p>
 <p>그래프 제목 : 일별 최고기온</p>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8203.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8203.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8203 = ''
@@ -2473,7 +2473,7 @@ answer_8206 = [
 ]
 
 question_8208 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
-<p>push_up.csv 파일(파일경로:'/content/jupyter_judge/csv_file/push_up.csv')은 40명 학생의 팔굽혀펴기 기록이 있습니다. </p> 
+<p>push_up.csv 파일(파일경로:'/content/PAAinJN/csv_file/push_up.csv')은 40명 학생의 팔굽혀펴기 기록이 있습니다. </p> 
 <p>40명 학생의 팔굽혀펴기 결과를 히스토그램으로 나타내시오.</p>
 <HR>
 <h2>데이터</h2>
@@ -2521,7 +2521,7 @@ question_review_8208 = '''
 <input type='checkbox'/>그래프 제목
 '''
 answer_8208 = [
-    {'input' : [], 'output' : ["plt.subplot(1,2,2)","bins = [0,10,20,30,40,50,60,70]" ,"df = pd.read_csv('/content/jupyter_judge/csv_file/push_up.csv')" ,"plt.hist(df['push_up'], bins = bins)" ,"plt.grid()" ,"plt.title('팔굽혀펴기 분포도')", "plt.show()"]}
+    {'input' : [], 'output' : ["plt.subplot(1,2,2)","bins = [0,10,20,30,40,50,60,70]" ,"df = pd.read_csv('/content/PAAinJN/csv_file/push_up.csv')" ,"plt.hist(df['push_up'], bins = bins)" ,"plt.grid()" ,"plt.title('팔굽혀펴기 분포도')", "plt.show()"]}
 ]
 
 question_8211 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
@@ -2564,7 +2564,7 @@ answer_8211 = [
 
 
 question_8219 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
-<p>scatter1.csv 파일(파일경로:'/content/jupyter_judge/csv_file/scatter1.csv')은 x,y 값이 저장되어 있습니다. </p> 
+<p>scatter1.csv 파일(파일경로:'/content/PAAinJN/csv_file/scatter1.csv')은 x,y 값이 저장되어 있습니다. </p> 
 <p>x,y를 산점도를 나타내봅시다. </p>
 <HR>
 <h2>데이터</h2>
@@ -2612,11 +2612,11 @@ question_review_8219 = '''
 <input type='checkbox'/>상관관계가 있는 그래프일까요?
 '''
 answer_8219 = [
-    {'input' : [], 'output' : ["plt.subplot(1,2,2)", "df = pd.read_csv('/content/jupyter_judge/csv_file/scatter1.csv')", "plt.scatter(df['x'], df['y'])", "plt.xlim(0,100)", "plt.ylim(0,100)", "plt.title('x,y의 산점도')", "plt.show()"]}
+    {'input' : [], 'output' : ["plt.subplot(1,2,2)", "df = pd.read_csv('/content/PAAinJN/csv_file/scatter1.csv')", "plt.scatter(df['x'], df['y'])", "plt.xlim(0,100)", "plt.ylim(0,100)", "plt.title('x,y의 산점도')", "plt.show()"]}
 ]
 
 question_8220 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
-<p>scatter2.csv 파일(파일경로:'/content/jupyter_judge/csv_file/scatter2.csv')은 x,y 값이 저장되어 있습니다. </p> 
+<p>scatter2.csv 파일(파일경로:'/content/PAAinJN/csv_file/scatter2.csv')은 x,y 값이 저장되어 있습니다. </p> 
 <p>x,y를 산점도를 나타내봅시다. </p>
 <HR>
 <h2>데이터</h2>
@@ -2664,7 +2664,7 @@ question_review_8220 = '''
 <input type='checkbox'/>상관관계가 있는 그래프일까요?
 '''
 answer_8220 = [
-    {'input' : [], 'output' : ["plt.subplot(1,2,2)", "df = pd.read_csv('/content/jupyter_judge/csv_file/scatter2.csv')", "plt.scatter(df['x'], df['y'])", "plt.xlim(0,100)", "plt.ylim(0,100)", "plt.title('x,y의 산점도')", "plt.show()"]}
+    {'input' : [], 'output' : ["plt.subplot(1,2,2)", "df = pd.read_csv('/content/PAAinJN/csv_file/scatter2.csv')", "plt.scatter(df['x'], df['y'])", "plt.xlim(0,100)", "plt.ylim(0,100)", "plt.title('x,y의 산점도')", "plt.show()"]}
 ]
 question_8401 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <p> 다음은 부산광역시 연도별 자동차 등록 대수와 관련된 공공데이터이다.</p>
@@ -2678,14 +2678,14 @@ question_8401 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/busan_car.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/busan_car.csv')</p>
 <p>'연도', '계' 열에 있는 데이터를 사용해봅시다.
 <p>그래프 제목은 '연도별 부산시 자동차 등록대수'로 합니다.</p>
 </p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8401.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8401.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8401 = ''
@@ -2697,7 +2697,7 @@ question_review_8401 = '''
 <input type='checkbox'/>데이터 프레임에서 열 선택
 '''
 answer_8401 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/jupyter_judge/csv_file/busan_car.csv')","A_plot=plt.plot(df['연도'], df['계'])", "A_hlines=plt.hlines(1000000,1960, 2022, color = 'red')", "A_title=plt.title('연도별 부산시 자동차 등록대수 변화')", "plt.show()"]}
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/PAAinJN/csv_file/busan_car.csv')","A_plot=plt.plot(df['연도'], df['계'])", "A_hlines=plt.hlines(1000000,1960, 2022, color = 'red')", "A_title=plt.title('연도별 부산시 자동차 등록대수 변화')", "plt.show()"]}
 ]
 
 question_8402 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
@@ -2711,14 +2711,14 @@ question_8402 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/trade.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/trade.csv')</p>
 <p>'품목명', '수출금액' 열에 있는 데이터를 사용해봅시다.</p>
 <p>그래프 제목은 '2022년 10대 수출품'으로 합니다.</p>
 </p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8402.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8402.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8402 = ''
@@ -2730,7 +2730,7 @@ question_review_8402 = '''
 <input type='checkbox'/>제목
 '''
 answer_8402 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/jupyter_judge/csv_file/trade.csv')", "x = df['수출금액']", "labels = df['품목명']", "A_pie=plt.pie(x,labels = labels, autopct = '%.f%%')", "A_title=plt.title('2022년 10대 수출품')", "plt.show()"]}
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/PAAinJN/csv_file/trade.csv')", "x = df['수출금액']", "labels = df['품목명']", "A_pie=plt.pie(x,labels = labels, autopct = '%.f%%')", "A_title=plt.title('2022년 10대 수출품')", "plt.show()"]}
 ]
 
 question_8403 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
@@ -2746,14 +2746,14 @@ question_8403 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/food_poisoning.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/food_poisoning.csv')</p>
 <p>'month', 'outbreak', 'temp' 열에 있는 데이터를 사용해봅시다.</p>
 <p>그래프 제목은 '식중독과 온도 그래프'</p>
 </p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8403.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8403.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8403 = ''
@@ -2765,7 +2765,7 @@ question_review_8403 = '''
 <input type='checkbox'/>xlabel
 '''
 answer_8403 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/jupyter_judge/csv_file/food_poisoning.csv')","A_plt=plt.plot(df.month, df.temp)", "A_bar=plt.bar(df.month, df.outbreak, color = 'red')", "A_title=plt.title('식중독과 온도 그래프')", "A_xlabel=plt.xlabel('월')", "plt.show()"]}
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","df = pd.read_csv('/content/PAAinJN/csv_file/food_poisoning.csv')","A_plt=plt.plot(df.month, df.temp)", "A_bar=plt.bar(df.month, df.outbreak, color = 'red')", "A_title=plt.title('식중독과 온도 그래프')", "A_xlabel=plt.xlabel('월')", "plt.show()"]}
 ]
 
 question_8501 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
@@ -2784,14 +2784,14 @@ question_8501 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')</p>
 <p>'city_province', 'emission' 열에 있는 데이터를 사용해봅시다.</p>
 
 </p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8501.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8501.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8501 = ''
@@ -2803,7 +2803,7 @@ question_review_8501 = '''
 <input type='checkbox'/>ylabel
 '''
 answer_8501 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')",
                                    "city = data['city_province']",
                                    "emission = data['emission']",
                                    "A_bar = plt.bar(city, emission)",
@@ -2829,14 +2829,14 @@ question_8502 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')</p>
 <p>'city_province', 'emission_per_person' 열에 있는 데이터를 사용해봅시다.</p>
 
 </p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8502.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8502.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8502 = ''
@@ -2849,7 +2849,7 @@ question_review_8502 = '''
 '''
 answer_8502 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')", 
                                    "city = data['city_province']", 
                                    "emission_per_person = data['emission_per_person']", 
 
@@ -2883,7 +2883,7 @@ question_8503 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8503.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8503.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8503 = ''
@@ -2895,7 +2895,7 @@ question_review_8503 = '''
 <input type='checkbox'/>ylabel
 '''
 answer_8503 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')",
                                   "body_part = ['머리', '치아', '흉복부', '팔', '손', '다리', '팔', '기타']",
                                   "count = [8943, 2096, 695, 3280, 14263, 3437, 12657, 1274]",
                                   "A_bar = plt.bar(body_part, count)",
@@ -2930,7 +2930,7 @@ question_8504 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8504.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8504.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8504 = ''
@@ -2942,7 +2942,7 @@ question_review_8504 = '''
 <input type='checkbox'/>ylabel
 '''
 answer_8504 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/food_waste.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/food_waste.csv')",
                                   "time = ['수업', '체육', '점심', '휴식_청소', '특별활동', '학교행사', '등하교',  '기타']",
                                   "count = [7606, 17077, 11761,  8282, 953, 1628, 4086,  1355]",
                                   "plt.bar(time, count)",
@@ -2978,7 +2978,7 @@ question_8511 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8511.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8511.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8511 = ''
@@ -3016,13 +3016,13 @@ question_8512 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/output_by_the_material.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/output_by_the_material.csv')</p>
 <p>year = data['year']</p>
 <p>renewable = data['renewable]</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8512.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8512.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8512 = ''
@@ -3036,7 +3036,7 @@ question_review_8512 = '''
 '''
 answer_8512 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/output_by_the_material.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/output_by_the_material.csv')", 
                                    "year_ = data['year']", 
                                    "renewable_ = data['renewable']", 
                                    "A_plot = plt.plot(year_, renewable_)", 
@@ -3062,14 +3062,14 @@ question_8513 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/output_by_the_material.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/output_by_the_material.csv')</p>
 <p>year = data['year']</p>
 <p>renewable = data['renewable']</p>
 <p>thermal = data['thermal']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8513.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8513.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8513 = ''
@@ -3082,7 +3082,7 @@ question_review_8513 = '''
 '''
 answer_8513 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/output_by_the_material.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/output_by_the_material.csv')", 
                                    "year_ = data['year']", 
                                    "renewable_ = data['renewable']", 
                                    "thermal_ = data['thermal']", 
@@ -3110,13 +3110,13 @@ question_8521 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')</p>
 <p>year = data['year']</p>
 <p>mother = data['mother']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8521.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8521.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8521 = ''
@@ -3131,7 +3131,7 @@ question_review_8521 = '''
 answer_8521 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
                                    "year = data['year']",
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')", 
                                    "mother = data['mother']", 
                                    "A_plot = plt.plot(year, mother, label = 'mother')", 
                                    "A_xlabel = plt.xlabel('연도')", 
@@ -3156,13 +3156,13 @@ question_8522 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')</p>
 <p>year = data['year']</p>
 <p>father = data['father']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8522.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8522.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8522 = ''
@@ -3176,7 +3176,7 @@ question_review_8522 = '''
 '''
 answer_8522 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')", 
                                    "year = data['year']", 
                                    "father = data['father']", 
                                    "A_plot = plt.plot(year, father, label = 'father')", 
@@ -3202,14 +3202,14 @@ question_8523 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')</p>
 <p>year = data['year']</p>
 <p>mother = data['mother']</p>
 <p>father = data['father']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8523.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8523.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8523 = ''
@@ -3223,7 +3223,7 @@ question_review_8523 = '''
 '''
 answer_8523 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')", 
                                    "year = data['year']", 
                                    "mother = data['mother']", 
                                    "father = data['father']", 
@@ -3253,7 +3253,7 @@ question_8524 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')</p>
 <p>data_man = data[data['성별'] == '남']</p>
 <p>man_height = data_man['키(cm)']</p>
 </p>age = data_man['나이']</p>
@@ -3261,7 +3261,7 @@ question_8524 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8524.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8524.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8524 = ''
@@ -3274,8 +3274,8 @@ question_review_8524 = '''
 <input type='checkbox'/>legend
 '''
 answer_8524 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
                                   "data_man = data[data['성별'] == '남']",
                                   "man_height = data_man['키(cm)']",
                                   "age = data_man['나이']",
@@ -3306,7 +3306,7 @@ question_8525 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')</p>
 <p>data_woman = data[data['성별'] == '여']</p>
 <p>woman_height = data_woman['키(cm)']</p>
 </p>age = data_woman['나이']</p>
@@ -3314,7 +3314,7 @@ question_8525 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8525.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8525.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8525 = ''
@@ -3327,8 +3327,8 @@ question_review_8525 = '''
 <input type='checkbox'/>legend
 '''
 answer_8525 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
                                   "data_woman = data[data['성별'] == '여']",
                                   "woman_height = data_woman['키(cm)']",
                                   "age = data_woman['나이']",
@@ -3360,7 +3360,7 @@ question_8526 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')</p>
 <p>data_man = data[data['성별'] == '남']</p>
 <p>man_height = data_man['키(cm)']</p>
 <p>data_woman = data[data['성별'] == '여']</p>
@@ -3370,7 +3370,7 @@ question_8526 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8526.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8526.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8526 = ''
@@ -3384,8 +3384,8 @@ question_review_8526 = '''
 <input type='checkbox'/>legend
 '''
 answer_8526 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/checkup.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
                                   "data_man = data[data['성별'] == '남']",
                                   "man_height = data_man['키(cm)']",
                                   "data_woman = data[data['성별'] == '여']",
@@ -3426,7 +3426,7 @@ question_8531 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8531.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8531.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8531 = ''
@@ -3466,7 +3466,7 @@ question_8532 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8532.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8532.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8532 = ''
@@ -3505,7 +3505,7 @@ question_8533 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8533.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8533.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8533 = ''
@@ -3539,13 +3539,13 @@ question_8534 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/private_education_expense.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/private_education_expense.csv')</p>
 <p>year = data['연도']</p>
 <p>ele = data['초등학교_전체']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8534.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8534.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8534 = ''
@@ -3558,7 +3558,7 @@ question_review_8534 = '''
 '''
 answer_8534 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/private_education_expense.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/private_education_expense.csv')",
                                   "year = data['연도']", 
                                   "total_ele = data['초등학교_전체']", 
                                   "A_plot = plt.plot(year, total_ele)", 
@@ -3586,14 +3586,14 @@ question_8541 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')</p>
 <p>data_city = data[data['metropolitan_city'] == '경상도']</p>
 <p>city_province = data_city['city_province']</p>
 <p>death = data_city['death']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8541.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8541.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8541 = ''
@@ -3607,7 +3607,7 @@ question_review_8541 = '''
 '''
 answer_8541 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')", 
                                   "data_city = data[data['metropolitan_city'] == '경상도']", 
                                   "city_province = data_city['city_province']", 
                                   "death = data_city['death']", 
@@ -3633,12 +3633,12 @@ question_8542 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')</p>
 <p>death = data['death']
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8542.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8542.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8542 = ''
@@ -3649,7 +3649,7 @@ question_review_8542 = '''
 '''
 answer_8542 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')", 
                                   "death = data['death']", 
                                   "A_hist = plt.hist(death, bins = [2,3,4,5,6,7,8,9,10,11,12])", 
                                   "A_xlabel = plt.xlabel('사망자 수(명)')", 
@@ -3674,13 +3674,13 @@ question_8543 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')</p>
 <p>data_mid = data[data['학년']=='중3']['키']</p>
 
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8543.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8543.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8543 = ''
@@ -3694,7 +3694,7 @@ question_review_8543 = '''
 '''
 answer_8543 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
                                   "data_mid = data[data['학년']=='중3']['키']",
                                   "A_hist = plt.hist(data_mid,bins = 12, range = [130, 190])",
                                   "A_title = plt.title('중3학생의 키')",
@@ -3721,13 +3721,13 @@ question_8544 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')</p>
 <p>data_mid = data[data['학년']=='중3']['몸무게']</p>
 
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8544.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8544.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8544 = ''
@@ -3740,7 +3740,7 @@ question_review_8544 = '''
 <input type='checkbox'/>range
 '''
 answer_8544 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
                                   "data_mid = data[data['학년']=='중3']",
                                   "A_hist = plt.hist(data_mid['몸무게'],bins = 14, range = [30, 100])",
                                   "A_title = plt.title('중3학생의 몸무게')",
@@ -3771,14 +3771,14 @@ question_8545 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')</p>
 <p>data_mid = data[data['학년']=='중3']['키']</p>
 <p>data_mid_mean = data_mid.mean()</p>
 
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8545.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8545.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8545 = ''
@@ -3794,7 +3794,7 @@ question_review_8545 = '''
 <input type='checkbox'/>수직선 label
 '''
 answer_8545 = [
-    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/jupyter_judge/csv_file/total_checkup.csv')",
+    {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)","data = pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
                                   "data_mid = data[data['학년']=='중3']['키']",
                                   "data_mid_mean = data_mid.mean()",
                                   "A_hist = plt.hist(data_mid,bins = 12, range = [130, 190])",
@@ -3824,12 +3824,12 @@ question_8551 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/movie_audience.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/movie_audience.csv')</p>
 <p>movie_audience = data['audiences']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8551.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8551.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8551 = ''
@@ -3841,7 +3841,7 @@ question_review_8551 = '''
 '''
 answer_8551 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/movie_audience.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/movie_audience.csv')",
                                   "movie_audience = data['audiences']",
                                   "A_hist = plt.hist(movie_audience, bins = 8, range = (10000000, 18000000))",
                                   "A_title = plt.title('1000만 관객을 넘은 영화의 히스토그램')",
@@ -3864,14 +3864,14 @@ question_8552 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/movie_audience.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/movie_audience.csv')</p>
 <p>data = data.sort_values('audience_per_showing', ascending = False)[:15]</p>
 <p>audience_per_showing = data['audience_per_showing']</p>
 <p>movie = data['movie']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8552.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8552.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8552 = ''
@@ -3884,7 +3884,7 @@ question_review_8552 = '''
 '''
 answer_8552 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/movie_audience.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/movie_audience.csv')",
                                   "data = data.sort_values('audience_per_showing', ascending = False)[:15]",
                                   "audience_per_showing = data['audience_per_showing']",
                                   "movie = data['movie']",
@@ -3914,13 +3914,13 @@ question_8561 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')</p>
 <p>weekday_inner= data['weekday_inner']</p>
 <p>weekday_inner_mean = weekday_inner.mean()
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8561.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8561.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8561 = ''
@@ -3935,7 +3935,7 @@ question_review_8561 = '''
 '''
 answer_8561 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')", 
                                   "weekday_inner= data['weekday_inner']", 
                                   "weekday_inner_mean = weekday_inner.mean()", 
                                   "A_hist = plt.hist(weekday_inner)",
@@ -3962,13 +3962,13 @@ question_8562 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')</p>
 <p>weekday_inner = data['weekday_inner']</p>
 <p>weekday_outer = data['weekday_outer']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8562.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8562.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8562 = ''
@@ -3978,7 +3978,7 @@ question_review_8562 = '''
 '''
 answer_8562 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')", 
                                   "weekday_inner = data['weekday_inner']",
                                   "weekday_outer = data['weekday_outer']", 
                                   "A_boxplot = plt.boxplot([weekday_inner, weekday_outer], labels = ['내선', '외선'])", 
@@ -4002,13 +4002,13 @@ question_8563 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')</p>
 <p>weekday_inner = data['weekday_inner']</p>
 <p>subway_time = data['time']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8563.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8563.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 
@@ -4022,7 +4022,7 @@ question_review_8563 = '''
 '''
 answer_8563 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')", 
                                   "weekday_inner = data['weekday_inner']", 
                                   "subway_time = data['time']", 
                                   "A_barh = plt.barh(subway_time, weekday_inner)", 
@@ -4046,13 +4046,13 @@ question_8564 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')</p>
 <p>weekday_inner = data['weekday_outer']</p>
 <p>subway_time = data['time']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8564.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8564.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8564 = ''
@@ -4065,7 +4065,7 @@ question_review_8564 = '''
 '''
 answer_8564 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/subway_congestion.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/subway_congestion.csv')", 
                                   "weekday_outer = data['weekday_outer']", 
                                   "subway_time = data['time']", 
                                   "A_barh = plt.barh(subway_time, weekday_outer)", 
@@ -4090,12 +4090,12 @@ question_8571 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')</p>
 <p>rent = data['rent']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8571.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8571.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8571 = ''
@@ -4107,7 +4107,7 @@ question_review_8571 = '''
 '''
 answer_8571 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')", 
                                   "rent = data['rent']", 
                                   "rent_mean = data['rent'].mean()", 
                                   "plt.boxplot(rent, labels = ['대여건수'])", 
@@ -4133,12 +4133,12 @@ question_8572 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')</p>
 <p>rent = data['rent']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8572.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8572.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8572 = ''
@@ -4150,7 +4150,7 @@ question_review_8572 = '''
 '''
 answer_8572 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')", 
                                   "rent = data['rent']", 
                                   "rent_mean = data['rent'].mean()",
                                   "A_hist = plt.hist(rent)",
@@ -4179,13 +4179,13 @@ question_8573 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')</p>
 <p>rent = data['rent']</p>
 <p>temperature = data['temperature']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8573.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8573.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8573 = ''
@@ -4199,7 +4199,7 @@ question_review_8573 = '''
 '''
 answer_8573 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')", 
                                   "rent = data['rent']", 
                                   "temperature = data['temperature']", 
                                   "A_scatter = plt.scatter(rent, temperature)", 
@@ -4225,13 +4225,13 @@ question_8574 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')</p>
 <p>rent = data['rent']</p>
 <p>dust = data['dust']</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8574.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8574.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8574= ''
@@ -4245,7 +4245,7 @@ question_review_8574 = '''
 '''
 answer_8574 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/bike_seoul.csv')", 
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')", 
                                   "rent = data['rent']", 
                                   "dust = data['dust']", 
                                   "A_scatter = plt.scatter(rent, dust)", 
@@ -4274,13 +4274,13 @@ question_8581 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')</p>
 <p>income = data['income']</p>
 <p>income_mean = income.mean()</p>
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8581.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8581.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8581= ''
@@ -4294,7 +4294,7 @@ question_review_8581 = '''
 '''
 answer_8581 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)",
-                                   "data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')", 
+                                   "data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')", 
                                   "income = data['income']", 
                                   "income_mean = income.mean()",
                                   "A_hist = plt.hist(income)",
@@ -4322,13 +4322,13 @@ question_8582 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')</p>
 <p>income = data['income']</p>
 <p>production_percentage = data['production_percentage']
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8582.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8582.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8582= ''
@@ -4342,7 +4342,7 @@ question_review_8582 = '''
 '''
 answer_8582 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')",
                                   "income = data['income']",
                                   "production_percentage = data['production_percentage']",
                                   "A_scatter = plt.scatter(income, production_percentage)",
@@ -4368,13 +4368,13 @@ question_8583 = '''<h1 style = "background-color:yellow; ">문제 설명</h1>
 <HR>
 <div style = "float:left;width:50%">
 <h2>데이터 예시 </h2>
-<p>data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')</p>
+<p>data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')</p>
 <p>income = data['income']</p>
 <p>old_percentage = data['old_percentage']
 </div>
 <div style = "float:right;width:50%">
 <h2>그래프 예시 </h2>
-<img src="https://github.com/GoHakNeung/jupyter_judge/blob/main/graph/answer_8583.png?raw=true" width = 150% height = 150%>
+<img src="https://github.com/GoHakNeung/PAAinJN/blob/main/graph/answer_8583.png?raw=true" width = 150% height = 150%>
 </div>
 '''
 img_8583= ''
@@ -4388,7 +4388,7 @@ question_review_8583 = '''
 '''
 answer_8583 = [
     {'input' : [[10]], 'output' : ["plt.subplot(1,2,2)", 
-                                  "data = pd.read_csv('/content/jupyter_judge/csv_file/income_and_population.csv')",
+                                  "data = pd.read_csv('/content/PAAinJN/csv_file/income_and_population.csv')",
                                   "income = data['income']",
                                   "old_percentage = data['old_percentage']", 
                                   "A_scatter = plt.scatter(income, old_percentage)", 
@@ -4418,7 +4418,7 @@ img_8601 =''
 
 ### 판다스 평가 예시 문제2 - 외부데이터 데이터프레임으로 불러오기 ###
 
-readcsv = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')
+readcsv = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')
 readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
 question_8602 = f'''
 read_csv로 데이터프레임을 불러옵시다.
@@ -4427,7 +4427,7 @@ read_csv로 데이터프레임을 불러옵시다.
 '''
 #정답데이터
 answer_8602 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')"]}
+    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')"]}
 ]
 #이미지
 img_8602 =''
@@ -4435,7 +4435,7 @@ img_8602 =''
 
 ### 판다스 평가 예시 문제3 - groupby ###
 
-readcsv = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')
+readcsv = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')
 readcsv = readcsv.groupby('metropolitan_city').sum()
 readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
 
@@ -4446,7 +4446,7 @@ metropolitan_city로 groupby하여 합계를 구해 봅시다.
 '''
 #정답데이터
 answer_8603 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/jupyter_judge/csv_file/car_accident.csv')", 
+    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')", 
                                   "df_answer = df_answer.groupby('metropolitan_city').sum()"]}
 ]
 #이미지
@@ -4454,7 +4454,7 @@ img_8603 =''
 
 ### 판다스 평가 예시 문제4 - 숫자 가져오기 ###
 
-readcsv = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')
+readcsv = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')
 readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
 question_8604 = f'''
 year 열에서 최댓값을 df에 저장합시다. 
@@ -4463,19 +4463,19 @@ year 열에서 최댓값을 df에 저장합시다.
 '''
 #정답데이터
 answer_8604 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/jupyter_judge/csv_file/babybreak.csv')", 
+    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')", 
                                   "df_answer = df_answer.year.max()"]}
 ]
 #이미지
 img_8604 =''
 
 # 결측치 처리
-table_8610 = pd.read_csv("/content/jupyter_judge/csv_file/missing_fill.csv")
+table_8610 = pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")
 table_html_8610 = table_8610.to_html(max_rows = 10, max_cols = 10)
 pre_table_8610 = table_8610.fillna(value = table_8610['D'].mean())
 pre_table_html_8610 = pre_table_8610.to_html(max_rows = 10, max_cols = 10)
 # question_8610 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
-# <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/jupyter_judge/csv_file/missing_fill.csv")</h3>
+# <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
 # <p>위 데이터에서 결측치를 D열의 평균으로 채워 넣어 df에 저장해봅시다.</p>
 # <HR>
 # <div style = "float:left;width:50%">
@@ -4489,7 +4489,7 @@ pre_table_html_8610 = pre_table_8610.to_html(max_rows = 10, max_cols = 10)
 # '''
 
 question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
-<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/jupyter_judge/csv_file/missing_fill.csv")</h3>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
 <p>Let's fill in the missing values in the data with the average of column D and save it to df.</p>
 <HR>
 <div style = "float:left;width:50%">
@@ -4502,7 +4502,7 @@ question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 </div>
 '''
 answer_8610 = [
-    {'input' : [], 'output' : ["data=pd.read_csv('/content/jupyter_judge/csv_file/missing_fill.csv')",
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_fill.csv')",
                               "df_answer = data.fillna(value = data['D'].mean())"]}
 ]
 img_8610 =''
@@ -4510,8 +4510,8 @@ img_8610 =''
 
 
 #데이터 합치기
-merge_df1 = pd.read_csv('/content/jupyter_judge/csv_file/merge1.csv')
-merge_df2 = pd.read_csv('/content/jupyter_judge/csv_file/merge2.csv')
+merge_df1 = pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')
+merge_df2 = pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')
 merge_df = pd.merge(merge_df1, merge_df2, how = 'left', on = 'key')
 
 merge_df1_html = merge_df1.to_html(max_rows = 10, max_cols =10)
@@ -4519,8 +4519,8 @@ merge_df2_html = merge_df2.to_html(max_rows = 10, max_cols =10)
 merge_df_html = merge_df.to_html(max_rows = 10, max_cols =10)
 
 # question_8620 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
-# <h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/jupyter_judge/csv_file/merge1.csv")</h3>
-# <h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/jupyter_judge/csv_file/merge2.csv")</h3>
+# <h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")</h3>
+# <h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")</h3>
 # <p>위 데이터를 key 열을 중심으로 data1에서 data2로 합쳐 df에 저장해봅시다.</p>
 # <HR>
 # <div style = "float:left;width:50%">
@@ -4534,8 +4534,8 @@ merge_df_html = merge_df.to_html(max_rows = 10, max_cols =10)
 # </div>
 # '''
 question_8620 = f''' <h2 style = "background-color:yellow; ">Description</h2>
-<h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/jupyter_judge/csv_file/merge1.csv")</h3>
-<h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/jupyter_judge/csv_file/merge2.csv")</h3>
+<h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")</h3>
+<h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")</h3>
 <p>Let's merge the data from data1 to data2 based on the 'key' column and save it to df.</p>
 <HR>
 <div style = "float:left;width:50%">
@@ -4551,8 +4551,8 @@ question_8620 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 
 #정답데이터
 answer_8620 = [
-    {'input' : [[10]], 'output' : ["data1 = pd.read_csv('/content/jupyter_judge/csv_file/merge1.csv')", 
-                                  "data2 = pd.read_csv('/content/jupyter_judge/csv_file/merge2.csv')", 
+    {'input' : [[10]], 'output' : ["data1 = pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')", 
+                                  "data2 = pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')", 
                                   "df_answer = pd.merge(data1, data2, how = 'left', on = 'key')"]}
 ]
 #이미지
