@@ -4474,19 +4474,6 @@ table_8610 = pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")
 table_html_8610 = table_8610.to_html(max_rows = 10, max_cols = 10)
 pre_table_8610 = table_8610.fillna(value = table_8610['D'].mean())
 pre_table_html_8610 = pre_table_8610.to_html(max_rows = 10, max_cols = 10)
-# question_8610 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
-# <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
-# <p>위 데이터에서 결측치를 D열의 평균으로 채워 넣어 df에 저장해봅시다.</p>
-# <HR>
-# <div style = "float:left;width:50%">
-# <h2> 전처리 전 데이터 </h2>
-# <p>{table_html_8610}<p>
-# </div>
-# <div style = "float:right;width:50%">
-# <h2> 전처리 후 데이터 </h2>
-# {pre_table_html_8610}
-# </div>
-# '''
 
 question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
@@ -4501,6 +4488,22 @@ question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 {pre_table_html_8610}
 </div>
 '''
+
+# question_8610 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
+# <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
+# <p>위 데이터에서 결측치를 D열의 평균으로 채워 넣어 df에 저장해봅시다.</p>
+# <HR>
+# <div style = "float:left;width:50%">
+# <h2> 전처리 전 데이터 </h2>
+# <p>{table_html_8610}<p>
+# </div>
+# <div style = "float:right;width:50%">
+# <h2> 전처리 후 데이터 </h2>
+# {pre_table_html_8610}
+# </div>
+# '''
+
+
 answer_8610 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_fill.csv')",
                               "df_answer = data.fillna(value = data['D'].mean())"]}
