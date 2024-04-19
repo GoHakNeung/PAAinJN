@@ -37,8 +37,7 @@ my_id = input('Enter your name')
 print("Let's study.")
 #------------------------------------------------------------------------------#
 # 문서 및 시트 불러오기
-doc = gc.open_by_url(spreadsheet_url)
-worksheet = doc.worksheet('시트1')
+
 
 #문제에 따른 시도한 횟수를 dictionary로 만듬
 trial_error_count = {}
