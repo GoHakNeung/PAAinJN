@@ -609,7 +609,7 @@ def turtle_check(py) :
     print('Generate the evaluation code.'))
     return
   turtle_convert('turtle_output.py')
-  Question('''<h3><p><span style="color:blue">파란색 도형</span>은 여러분이 작성한 코드로 그린 도형입니다.</p><p><span style="color:red">빨간색 도형</span>은 선생님이 작성한 코드로 그린 도형입니다.</p></h3>''')
+  Question('''<h3><p>The <span style="color:blue">blue shape</span> is the one drawn by your code.</p><p>The<span style="color:red">red shape</span> is the one drawn by answer code.</p></h3>''')
   #error_check에서 파일을 실행함. 이후 또 실행하면 터틀이 2번 그려짐. 그래서 error_check에서 에러검사 및 실행을 함.(정상 실행되면 그냥 실행함.)
   error_check('turtle_output.py')
   if compile_error == True :
@@ -1201,7 +1201,7 @@ def table_check(py) :
   try :
     table_arrange(py)
   except :
-    print('평가 코드를 생성하세요.')
+    print('Generate the evaluation code.')
     return
   table_convert('table_output.py')
   error_check('table_output.py')
@@ -1210,18 +1210,18 @@ def table_check(py) :
   if type(df) != type(df_answer) :
     print('형식이 다릅니다.')
   elif type(df) == pd.core.frame.DataFrame and type(df_answer) == pd.core.frame.DataFrame :
-    Question('<h2 style = "background-color:yellow">결과 확인</h2>')
+    Question('<h2 style = "background-color:yellow">Check the results</h2>')
   # 결과 자가 평가
     df_html = df.to_html(max_cols = 5, max_rows =5)
     df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
     output_html = f'''
     <div style="display: flex; flex-direction: row;">
         <div style="float:left;width:50%">
-        <h3>왼쪽 표는 여러분이 작성한 표입니다.</h3>
+        <h3>The left side shows the output produced by your code.</h3>
         <p >{df_html}</p>
         </div>
         <div style="float:right;width:50%">
-        <h3>오른쪽 표는 예시 답안입니다.</h3>
+        <h3>The right side shows the output produced by your code.</h3>
         <p >{df_answer_html}</p>
         </div>
     </div>
@@ -1239,72 +1239,54 @@ def table_check(py) :
     df_numpy = df.to_numpy()
     df_answer_numpy = df_answer.to_numpy()
     if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.columns, df_answer.columns) and np.array_equal(df.index, df_answer.index) :
-      print(tc_green+'정답입니다.'+reset)
+      print(tc_green+'Right answer.'+reset)
     else :
-      print(tc_red+'틀렸습니다.'+reset)
+      print(tc_red+'Wrong answer'+reset)
       table_feedback(df, df_answer)
-
-    if compile_error == True :
-      update_excel('틀렸습니다.',py)
-    else :
-      update_excel('정답입니다.', py)
 
   elif type(df) == pd.core.series.Series and type(df_answer) == pd.core.series.Series :
     df_numpy = df.to_numpy()
     df_answer_numpy = df_answer.to_numpy()
     if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.index, df_answer.index) :
-      print(tc_green+'정답입니다.'+reset)
+      print(tc_green+'Right answer.'+reset)
     else :
-      print(tc_red+'틀렸습니다.'+reset)
+      print(tc_red+'Wrong answer.'+reset)
       table_series_feedback(df, df_answer)
 
-    if compile_error == True :
-      update_excel('틀렸습니다.',py)
-    else :
-      update_excel('정답입니다.', py)
   elif df == df_answer and df !='' :
     output_html = f'''
     <div style="display: flex; flex-direction: row;">
         <div style="float:left;width:50%">
-        <h3>왼쪽에 있는 값은 여러분이 작성한 값입니다.</h3>
+        <h3>The value on the left is the output produced by your code.</h3>
         <p >{df}</p>
         </div>
         <div style="float:right;width:50%">
-        <h3>오른쪽에 있는 값은 예시 답안입니다.</h3>
+        <h3>The value on the right is the output produced by your code.</h3>
         <p >{df_answer}</p>
         </div>
     </div>
     '''
     Question(output_html)
     Question('<HR>')
-    print(tc_green+'정답입니다.'+reset)
+    print(tc_green+'Right answer.'+reset)
 
-    if compile_error == True :
-      update_excel('틀렸습니다.',py)
-    else :
-      update_excel('정답입니다.', py) 
-      
+     
   elif df != df_answer and df != '' :
     output_html = f'''
     <div style="display: flex; flex-direction: row;">
         <div style="float:left;width:50%">
-        <h3>왼쪽에 있는 값은 여러분이 작성한 값입니다.</h3>
+        <h3>The value on the left is the output produced by your code.</h3>
         <p >{df}</p>
         </div>
         <div style="float:right;width:50%">
-        <h3>오른쪽에 있는 값은 예시 답안입니다.</h3>
+        <h3>The value on the right is the output produced by your code..</h3>
         <p >{df_answer}</p>
         </div>
     </div>
     '''
     Question(output_html)
     Question('<HR>')
-    print(tc_red+'틀렸습니다.'+reset)
-    
-    if compile_error == True :
-      update_excel('틀렸습니다.',py)
-    else :
-      update_excel('정답입니다.', py) 
+    print(tc_red+'Wrong answer.'+reset)
 
   elif df == df_answer and df == '' :
     return
@@ -1325,20 +1307,20 @@ def table_check(py) :
 
 def table_feedback(df, df_answer) :
   if df.shape != df_answer.shape :
-    Question('shape가 다릅니다.')
+    Question('Shape is different.')
   elif (df.columns != df_answer.columns).sum() != 0 :
-    Question('columns가 다릅니다.')
+    Question('Columns is different.')
   elif (df.index != df_answer.index).sum() != 0 :
-    Question('index가 다릅니다.')
+    Question('Index is different')
   else :
-    Question('데이터 프레임 속 값이 다릅니다.')
+    Question('The values in the dataframe are different.')
 
 
 
 def table_series_feedback(df, df_answer) :
   if df.shape != df_answer.shape :
-    Question('shape가 다릅니다.')
+    Question('Shape is different.')
   elif (df.index != df_answer.index).sum() != 0 :
-    Question('index가 다릅니다.')
+    Question('Index is different')
   else :
-    Question('데이터 프레임 속 값이 다릅니다.')
+    Question('The values in the dataframe are different.')
