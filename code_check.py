@@ -606,7 +606,7 @@ def turtle_check(py) :
   try :
     turtle_arrange(py)
   except :
-    print('Generate the evaluation code.'))
+    print('Generate the evaluation code.')
     return
   turtle_convert('turtle_output.py')
   Question('''<h3><p>The <span style="color:blue">blue shape</span> is the one drawn by your code.</p><p>The<span style="color:red">red shape</span> is the one drawn by answer code.</p></h3>''')
