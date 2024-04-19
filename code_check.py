@@ -5,9 +5,9 @@ import numpy as np
 from requests import get
 from oauth2client.service_account import ServiceAccountCredentials
 from IPython.core.display import display, HTML
-from jupyter_judge.problem import *
+from PAAinJN.problem import *
 # from jupyter_judge.problem2 import *
-from jupyter_judge.ColabTurtleClass import *
+from PAAinJN.ColabTurtleClass import *
 from PIL import Image
 
 import warnings
