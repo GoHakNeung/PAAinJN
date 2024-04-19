@@ -6,7 +6,7 @@ from requests import get
 from oauth2client.service_account import ServiceAccountCredentials
 from IPython.core.display import display, HTML
 from PAAinJN.problem import *
-# from jupyter_judge.problem2 import *
+# from PAAinJN.problem2 import *
 from PAAinJN.ColabTurtleClass import *
 from PIL import Image
 
@@ -24,7 +24,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-mpl.font_manager.fontManager.addfont('/content/jupyter_judge/NanumBarunGothic.ttf')
+mpl.font_manager.fontManager.addfont('/content/PAAinJN/NanumBarunGothic.ttf')
 mpl.rcParams['font.family'] = 'NanumBarunGothic'
 mpl.rcParams['axes.unicode_minus'] = False
 mpl.rc('font', size = 14)
@@ -556,7 +556,7 @@ def turtle_convert(output_turtle) :
   original = sys.stdout
   sys.stdout = f
   print('#---코드 변환---')
-  print('from jupyter_judge.ColabTurtleClass import Turtle, Window')
+  print('from PAAinJN.ColabTurtleClass import Turtle, Window')
   print('window = Window()')
   print('s = Turtle(window)')
   for i in range(len(code)) :
@@ -874,7 +874,7 @@ def plot_check(py) :
   #정보를 얻기 위함. get_return 함수를 plot_check 안에다가 만듬.
 
   #정답 코드 가져오는것
-  answer_graph = '/content/jupyter_judge/graph/answer'+py[:-3]+'.png'
+  answer_graph = '/content/PAAinJN/graph/answer'+py[:-3]+'.png'
   review = 'question'+'_review'+py[:-3]
   global original
   trial_error_count[py] += 1
