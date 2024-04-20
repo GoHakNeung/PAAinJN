@@ -1201,20 +1201,6 @@ def table_check(py) :
     Question('<h2 style = "background-color:yellow">Check the results</h2>')
   # 결과 자가 평가
     df_html = df.to_html(max_cols = 5, max_rows =5)
-    df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
-    output_html = f'''
-    <div style="display: flex; flex-direction: row;">
-        <div style="float:left;width:50%">
-        <h3>The left side shows the output produced by your code.</h3>
-        <p >{df_html}</p>
-        </div>
-        <div style="float:right;width:50%">
-        <h3>The right side shows the output produced by your code.</h3>
-        <p >{df_answer_html}</p>
-        </div>
-    </div>
-    '''
-
     
     if df.shape == df_answer.shape : 
       df_answer_html_color = df_answer.style.applymap(table_compare, df_answer = df).to_html()
@@ -1233,6 +1219,19 @@ def table_check(py) :
 
       Question(output_html_color)
     else : 
+      df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
+      output_html = f'''
+      <div style="display: flex; flex-direction: row;">
+          <div style="float:left;width:50%">
+          <h3>The left side shows the output produced by your code.</h3>
+          <p >{df_html}</p>
+          </div>
+          <div style="float:right;width:50%">
+          <h3>The right side shows the output produced by your code.</h3>
+          <p >{df_answer_html}</p>
+          </div>
+      </div>
+      '''      
       Question(output_html)
     Question('<HR>')
 # 자동 평가
