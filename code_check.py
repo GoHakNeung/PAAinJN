@@ -1146,6 +1146,26 @@ def table_convert(output_table) :
   sys.stdout = original
   f.close()
 
+table_count = 0
+def table_compare(x, df_answer=df_answer, color='#fffacd') :
+  global table_count
+  # print(count)
+  row = df_answer.shape[0]
+  col = df_answer.shape[1]
+  new_row = count % row
+  new_col = count // row
+  table_count += 1
+  # print(f'new_row : {new_row}')
+  # print(f'new_col : {new_col}')
+  # print(f'x : {x}')
+  # print(f'df_answer.iloc[new_row, new_col] : {df_answer.iloc[new_row, new_col]}')
+  if x != df_answer.iloc[new_row, new_col]:
+    color = f'background-color:{color}'
+    return color
+  else :
+    return ''
+#df.style.applymap(table_compare) <- 이런 형태로 출력함.
+
 # 평가 함수
 def table_check(py) :
   global code, raw_code
@@ -1194,7 +1214,24 @@ def table_check(py) :
         </div>
     </div>
     '''
-    Question(output_html)
+    output_html_color = f'''
+    <div style="display: flex; flex-direction: row;">
+        <div style="float:left;width:50%">
+        <h3>The left side shows the output produced by your code.</h3>
+        <p >{df_html}</p>
+        </div>
+        <div style="float:right;width:50%">
+        <h3>The right side shows the output produced by your code.</h3>
+        <p >{df_answer_html_color}</p>
+        </div>
+    </div>
+    '''
+    
+    if df.shape == df_answer.shape : 
+      df_answer_html_color = df_answer.style.applymap(compare, df_answer = df).to_html()
+      Question(output_html_color)
+    else : 
+      Question(output_html)
     Question('<HR>')
 # 자동 평가
     #NAN이 있어도 평가하기 위해 추가한 코드
