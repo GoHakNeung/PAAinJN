@@ -1203,6 +1203,7 @@ def table_check(py) :
     df_html = df.to_html(max_cols = 5, max_rows =5)
     
     if df.shape == df_answer.shape : 
+      global table_count
       table_count = 0
       df_answer_html_color = df_answer.style.applymap(table_compare, df_answer = df).to_html()
       output_html_color = f'''
