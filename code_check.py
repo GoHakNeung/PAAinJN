@@ -1214,21 +1214,23 @@ def table_check(py) :
         </div>
     </div>
     '''
-    output_html_color = f'''
-    <div style="display: flex; flex-direction: row;">
-        <div style="float:left;width:50%">
-        <h3>The left side shows the output produced by your code.</h3>
-        <p >{df_html}</p>
-        </div>
-        <div style="float:right;width:50%">
-        <h3>The right side shows the output produced by your code.</h3>
-        <p >{df_answer_html_color}</p>
-        </div>
-    </div>
-    '''
+
     
     if df.shape == df_answer.shape : 
       df_answer_html_color = df_answer.style.applymap(compare, df_answer = df).to_html()
+      output_html_color = f'''
+      <div style="display: flex; flex-direction: row;">
+          <div style="float:left;width:50%">
+          <h3>The left side shows the output produced by your code.</h3>
+          <p >{df_html}</p>
+          </div>
+          <div style="float:right;width:50%">
+          <h3>The right side shows the output produced by your code.</h3>
+          <p >{df_answer_html_color}</p>
+          </div>
+      </div>
+      '''      
+
       Question(output_html_color)
     else : 
       Question(output_html)
