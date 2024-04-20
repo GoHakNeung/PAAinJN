@@ -1213,7 +1213,7 @@ def table_check(py) :
           <p >{df_html}</p>
           </div>
           <div style="float:right;width:50%">
-          <h3>The right side shows the output produced by your code.</h3>
+          <h3>The right side shows the output produced by model answer.</h3>
           <p >{df_answer_html_color}</p>
           </div>
       </div>
@@ -1229,7 +1229,7 @@ def table_check(py) :
           <p >{df_html}</p>
           </div>
           <div style="float:right;width:50%">
-          <h3>The right side shows the output produced by your code.</h3>
+          <h3>The right side shows the output produced by model answer.</h3>
           <p >{df_answer_html}</p>
           </div>
       </div>
