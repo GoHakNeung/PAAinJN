@@ -1147,7 +1147,7 @@ def table_convert(output_table) :
   f.close()
 
 table_count = 0
-def table_compare(x, df_answer=df_answer, color='#fffacd') :
+def table_compare(x, df_answer, color='#fffacd') :
   global table_count
   # print(count)
   row = df_answer.shape[0]
