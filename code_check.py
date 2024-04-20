@@ -1152,8 +1152,8 @@ def table_compare(x, df_answer, color='#fffacd') :
   # print(count)
   row = df_answer.shape[0]
   col = df_answer.shape[1]
-  new_row = count % row
-  new_col = count // row
+  new_row = table_count % row
+  new_col = table_count // row
   table_count += 1
   # print(f'new_row : {new_row}')
   # print(f'new_col : {new_col}')
