@@ -1196,7 +1196,7 @@ def table_check(py) :
 
 
   if type(df) != type(df_answer) :
-    print('형식이 다릅니다.')
+    print('Type is different.')
   elif type(df) == pd.core.frame.DataFrame and type(df_answer) == pd.core.frame.DataFrame :
     Question('<h2 style = "background-color:yellow">Check the results</h2>')
   # 결과 자가 평가
@@ -1205,7 +1205,7 @@ def table_check(py) :
     if df.shape == df_answer.shape : 
       global table_count
       table_count = 0
-      df_answer_html_color = df_answer.style.applymap(table_compare, df_answer = df).to_html()
+      df_answer_html_color = df_answer.style.applymap(table_compare, df_answer = df).to_html().replace('<table', '<table class = "dataframe"')
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
           <div style="float:left;width:50%">
