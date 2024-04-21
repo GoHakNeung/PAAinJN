@@ -1200,21 +1200,22 @@ def table_check(py) :
   elif type(df) == pd.core.frame.DataFrame and type(df_answer) == pd.core.frame.DataFrame :
     Question('<h2 style = "background-color:yellow">Check the results</h2>')
   # 결과 자가 평가
+    df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
     df_html = df.to_html(max_cols = 5, max_rows =5)
     
     if df.shape == df_answer.shape : 
       global table_count
       table_count = 0
-      df_answer_html_color = df_answer.style.applymap(table_compare, df_answer = df).to_html().replace('<table', '<table class = "dataframe"')
+      df_html_color = df.style.applymap(table_compare, df_answer = df_answer).to_html().replace('<table', '<table class = "dataframe"')
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
           <div style="float:left;width:50%">
           <h3>The left side shows the output produced by your code.</h3>
-          <p >{df_html}</p>
+          <p >{df_html_color}</p>
           </div>
           <div style="float:right;width:50%">
           <h3>The right side shows the output produced by model answer.</h3>
-          <p >{df_answer_html_color}</p>
+          <p >{df_answer_html}</p>
           </div>
       </div>
       '''      
