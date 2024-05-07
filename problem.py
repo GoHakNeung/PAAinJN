@@ -4539,11 +4539,80 @@ answer_8606 = [
 ]
 img_8606 =''
 
+##8607 문제
+table_8607 = pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")
+table_html_8607 = table_8607.to_html(max_rows = 10, max_cols = 10)
+pre_table_8607 = table_8607.groupby('학년')[['키', '몸무게']].min()
+pre_table_html_8607 = pre_table_8607.to_html(max_rows = 10, max_cols = 10)
+question_8607 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")</h3>
+<p>Let's group by '학년' in the total_check.csv file in csv file to get the minimum value and save it in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8607}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8607}
+</div>
+'''
+#모범답안
+answer_8607 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
+                              "df_answer = data.groupby('학년')[['키', '몸무게']].min()"]}
+]
+img_8607 =''
 
+##8606 문제
+table_8608 = pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")
+table_html_8608 = table_8608.to_html(max_rows = 10, max_cols = 10)
+pre_table_8608 = table_8608.groupby('학년')[['키', '몸무게']].max()
+pre_table_html_8608 = pre_table_8608.to_html(max_rows = 10, max_cols = 10)
+question_8608 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")</h3>
+<p>Let's group by '학년' in the total_check.csv file in csv file to get the maxium value and save it in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8608}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8608}
+</div>
+'''
+#모범답안
+answer_8608 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
+                              "df_answer = data.groupby('학년')[['키', '몸무게']].max()"]}
+]
+img_8608 =''
 
-
-
-
+##8609 문제
+table_8609 = pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")
+table_html_8609 = table_8609.to_html(max_rows = 10, max_cols = 10)
+pre_table_8609 = table_8609.groupby('시도')[['키', '몸무게']].mean()
+pre_table_html_8609 = pre_table_8609.to_html(max_rows = 10, max_cols = 10)
+question_8609 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/total_checkup.csv")</h3>
+<p>Let's group by '시도' in the total_check.csv file in csv file to get the mean value of '키', '몸무게' and save it in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8609}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8609}
+</div>
+'''
+#모범답안
+answer_8609 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/total_checkup.csv')",
+                              "df_answer = data.groupby('시도')[['키', '몸무게']].mean()"]}
+]
+img_8609 =''
 
 
 
@@ -4716,6 +4785,9 @@ test_set = [
     {'test_file' : '_8604.py', 'answer' : answer_8604, 'question' : question_8604, 'img' : img_8604}, 
     {'test_file' : '_8605.py', 'answer' : answer_8605, 'question' : question_8605, 'img' : img_8605}, 
     {'test_file' : '_8606.py', 'answer' : answer_8606, 'question' : question_8606, 'img' : img_8606}, 
+    {'test_file' : '_8607.py', 'answer' : answer_8607, 'question' : question_8607, 'img' : img_8607}, 
+    {'test_file' : '_8608.py', 'answer' : answer_8608, 'question' : question_8608, 'img' : img_8608}, 
+    {'test_file' : '_8609.py', 'answer' : answer_8609, 'question' : question_8609, 'img' : img_8609}, 
     # {'test_file' : '_8610.py', 'answer' : answer_8610, 'question' : question_8610, 'img' : img_8610},   
     # {'test_file' : '_8620.py', 'answer' : answer_8620, 'question' : question_8620, 'img' : img_8620},   
 ]
