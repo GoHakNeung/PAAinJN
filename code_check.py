@@ -1200,13 +1200,13 @@ def table_check(py) :
   elif type(df) == pd.core.frame.DataFrame and type(df_answer) == pd.core.frame.DataFrame :
     Question('<h2 style = "background-color:yellow">Check the results</h2>')
   # 결과 자가 평가
-    df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
-    df_html = df.to_html(max_cols = 5, max_rows =5)
+    df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5, show_dimensions = True)
+    df_html = df.to_html(max_cols = 5, max_rows =5, show_dimensions = True)
     
     if df.shape == df_answer.shape : 
       global table_count
       table_count = 0     
-
+      df_answer_html = df.style.format(precision = 2). to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       df_html_color = df.style.format(precision=2).applymap(table_compare, df_answer = df_answer).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
