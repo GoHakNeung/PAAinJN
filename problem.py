@@ -4458,7 +4458,7 @@ question_8603 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 </div>
 '''
 answer_8603 = [
-    {'input' : [], 'output' : ["data=pd.read_csv("\'/content/PAAinJN/csv_file/bike_seoul.csv')",
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
                               "df_answer = table_8603.head()"]}
 ]
 img_8603 =''
@@ -4477,24 +4477,6 @@ img_8603 =''
 
 
 
-### 판다스 평가 예시 문제3 - groupby ###
-
-readcsv = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')
-readcsv = readcsv.groupby('metropolitan_city').sum()
-readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
-
-question_8603 = f'''
-metropolitan_city로 groupby하여 합계를 구해 봅시다.
-<p>예시 </p>
-{readcsv_html}
-'''
-#정답데이터
-answer_8603 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/car_accident.csv')", 
-                                  "df_answer = df_answer.groupby('metropolitan_city').sum()"]}
-]
-#이미지
-img_8603 =''
 
 ### 판다스 평가 예시 문제4 - 숫자 가져오기 ###
 
