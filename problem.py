@@ -4515,7 +4515,7 @@ img_8610 =''
 #데이터 합치기
 merge_df1 = pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')
 merge_df2 = pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')
-merge_df = pd.merge(merge_df1, merge_df2, how = 'left', on = 'key')
+merge_df = pd.merge(merge_df1, merge_df2, how = 'left', on = ['key1', 'key2'])
 
 merge_df1_html = merge_df1.to_html(max_rows = 10, max_cols =10)
 merge_df2_html = merge_df2.to_html(max_rows = 10, max_cols =10)
