@@ -4400,7 +4400,7 @@ answer_8583 = [
 
 
 ### DPAA 문제
-#8601 데이터 프레임 만들기
+##8601 데이터 프레임 만들기
 table_8601 = pd.DataFrame({'Apples' : [30, 34, 21,22,54, 23, 43], 'Bananas' : [21, 12, 43, 23, 33, 56,23]})
 table_html_8601 = table_8601.to_html(max_rows = 10, max_cols = 10)
 question_8601 =f''' <h2 style = "background-color:yellow; ">Description</h2>
@@ -4420,7 +4420,7 @@ answer_8601 = [
 #이미지
 img_8601 =''
 
-###8602 외부데이터 불러와서 데이터 프레임 만들기
+##8602 외부데이터 불러와서 데이터 프레임 만들기
 table_8602 = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')
 table_html_8602 = table_8602.to_html(max_rows = 10, max_cols = 10)
 question_8602 =f''' <h2 style = "background-color:yellow; ">Description</h2>
@@ -4438,6 +4438,44 @@ answer_8602 = [
 ]
 #이미지
 img_8602 =''
+
+##8603 문제
+table_8603 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8603 = table_8603.to_html(max_rows = 10, max_cols = 10)
+pre_table_8603 = table_8603.head()
+pre_table_html_8603 = pre_table_8603.to_html(max_rows = 10, max_cols = 10)
+question_8603 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's just import the head() value of the bike_seoul.csv in the csv_file folder into the df variable.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8603}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8603}
+</div>
+'''
+answer_8603 = [
+    {'input' : [], 'output' : ["data=pd.read_csv("\'/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = table_8603.head()"]}
+]
+img_8603 =''
+
+##8604문제
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### 판다스 평가 예시 문제3 - groupby ###
 
