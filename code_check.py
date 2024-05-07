@@ -1207,7 +1207,7 @@ def table_check(py) :
       global table_count
       table_count = 0     
       df = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')
-      df_html_color = df.style.applymap(table_compare, df_answer = df_answer).format(precision=2).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
+      df_html_color = df.style.format(precision=2).applymap(table_compare, df_answer = df_answer).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
           <div style="float:left;width:50%">
