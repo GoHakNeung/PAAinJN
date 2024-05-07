@@ -4459,134 +4459,96 @@ question_8603 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 '''
 answer_8603 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
-                              "df_answer = table_8603.head()"]}
+                              "df_answer = data.head()"]}
 ]
 img_8603 =''
 
 ##8604문제
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### 판다스 평가 예시 문제4 - 숫자 가져오기 ###
-
-readcsv = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')
-readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
-question_8604 = f'''
-year 열에서 최댓값을 df에 저장합시다. 
-<p>예시 </p>
-{readcsv_html}
+table_8604 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8604 = table_8604.to_html(max_rows = 10, max_cols = 10)
+pre_table_8604 = table_8604.tail()
+pre_table_html_8604 = pre_table_8604.to_html(max_rows = 10, max_cols = 10)
+question_8604 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's just import the tail() value of the bike_seoul.csv in the csv_file folder in the df variable.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8604}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8604}
+</div>
 '''
-#정답데이터
+#모범답안
 answer_8604 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')", 
-                                  "df_answer = df_answer.year.max()"]}
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = data.tail()"]}
 ]
-#이미지
+#이미지 힌트
 img_8604 =''
 
-# 결측치 처리
-table_8610 = pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")
-table_html_8610 = table_8610.to_html(max_rows = 10, max_cols = 10)
-pre_table_8610 = table_8610.fillna(value = table_8610['D'].mean())
-pre_table_html_8610 = pre_table_8610.to_html(max_rows = 10, max_cols = 10)
-
-question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
-<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
-<p>Let's fill in the missing values in the data with the average of column D and save it to df.</p>
+##8605 문제
+table_8605 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8605 = table_8605.to_html(max_rows = 10, max_cols = 10)
+pre_table_8605 = table_8605.describe()
+pre_table_html_8605 = pre_table_8605.to_html(max_rows = 10, max_cols = 10)
+question_8605 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's just import the describ() value of the bike_seoul.csv in the csv_file folder in the df variable.</p>
 <HR>
 <div style = "float:left;width:50%">
 <h2> Data before preprocessing </h2>
-<p>{table_html_8610}<p>
+<p>{table_html_8605}<p>
 </div>
 <div style = "float:right;width:50%">
 <h2> Data after preprocessing </h2>
-{pre_table_html_8610}
+{pre_table_html_8605}
 </div>
 '''
-
-# question_8610 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
-# <h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_fill.csv")</h3>
-# <p>위 데이터에서 결측치를 D열의 평균으로 채워 넣어 df에 저장해봅시다.</p>
-# <HR>
-# <div style = "float:left;width:50%">
-# <h2> 전처리 전 데이터 </h2>
-# <p>{table_html_8610}<p>
-# </div>
-# <div style = "float:right;width:50%">
-# <h2> 전처리 후 데이터 </h2>
-# {pre_table_html_8610}
-# </div>
-# '''
-
-
-answer_8610 = [
-    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_fill.csv')",
-                              "df_answer = data.fillna(value = data['D'].mean())"]}
+#모범답안
+answer_8605 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = data.describe()"]}
 ]
-img_8610 =''
+img_8605 =''
 
-
-
-#데이터 합치기
-merge_df1 = pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')
-merge_df2 = pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')
-merge_df = pd.merge(merge_df1, merge_df2, how = 'left', on = ['key1', 'key2'])
-
-merge_df1_html = merge_df1.to_html(max_rows = 10, max_cols =10)
-merge_df2_html = merge_df2.to_html(max_rows = 10, max_cols =10)
-merge_df_html = merge_df.to_html(max_rows = 10, max_cols =10)
-
-question_8620 = f''' <h2 style = "background-color:yellow; ">Description</h2>
-<h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")</h3>
-<h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")</h3>
-<p>Let's merge the data from data1 to data2 based on the 'key' column and save it to df.</p>
+##8606 문제
+table_8606 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8606 = table_8606.to_html(max_rows = 10, max_cols = 10)
+pre_table_8606 = table_8606.sort_values(by = 'rent', ascending = False)
+pre_table_html_8606 = pre_table_8606.to_html(max_rows = 10, max_cols = 10)
+question_8606 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's import bike_seoul.csv in the csv_file folder into df by arranging the rent columns in descending order.</p>
 <HR>
 <div style = "float:left;width:50%">
 <h2> Data before preprocessing </h2>
-<p>data1 : {merge_df1_html}<p>
-<p>data2 : {merge_df2_html}<p>
+<p>{table_html_8606}<p>
 </div>
 <div style = "float:right;width:50%">
 <h2> Data after preprocessing </h2>
-{merge_df_html}
+{pre_table_html_8606}
 </div>
 '''
-
-# question_8620 = f''' <h2 style = "background-color:yellow; ">문제 설명</h2>
-# <h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")</h3>
-# <h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")</h3>
-# <p>위 데이터를 key 열을 중심으로 data1에서 data2로 합쳐 df에 저장해봅시다.</p>
-# <HR>
-# <div style = "float:left;width:50%">
-# <h2> 전처리 전 데이터 </h2>
-# <p>data1 : {merge_df1_html}<p>
-# <p>data2 : {merge_df2_html}<p>
-# </div>
-# <div style = "float:right;width:50%">
-# <h2> 전처리 후 데이터 </h2>
-# {merge_df_html}
-# </div>
-# '''
-
-#정답데이터
-answer_8620 = [
-    {'input' : [[10]], 'output' : ["data1 = pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')", 
-                                  "data2 = pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')", 
-                                  "df_answer = pd.merge(data1, data2, how = 'left', on = 'key')"]}
+#모범답안
+answer_8606 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = data.sort_values(by = 'rent', ascending = False)"]}
 ]
-#이미지
-img_8620 =''
+img_8606 =''
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4752,6 +4714,8 @@ test_set = [
     {'test_file' : '_8602.py', 'answer' : answer_8602, 'question' : question_8602, 'img' : img_8602},
     {'test_file' : '_8603.py', 'answer' : answer_8603, 'question' : question_8603, 'img' : img_8603},
     {'test_file' : '_8604.py', 'answer' : answer_8604, 'question' : question_8604, 'img' : img_8604}, 
-    {'test_file' : '_8610.py', 'answer' : answer_8610, 'question' : question_8610, 'img' : img_8610},   
-    {'test_file' : '_8620.py', 'answer' : answer_8620, 'question' : question_8620, 'img' : img_8620},   
+    {'test_file' : '_8605.py', 'answer' : answer_8605, 'question' : question_8605, 'img' : img_8605}, 
+    {'test_file' : '_8606.py', 'answer' : answer_8606, 'question' : question_8606, 'img' : img_8606}, 
+    # {'test_file' : '_8610.py', 'answer' : answer_8610, 'question' : question_8610, 'img' : img_8610},   
+    # {'test_file' : '_8620.py', 'answer' : answer_8620, 'question' : question_8620, 'img' : img_8620},   
 ]
