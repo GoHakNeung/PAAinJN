@@ -4414,7 +4414,7 @@ question_8601 =f''' <h2 style = "background-color:yellow; ">Description</h2>
 '''
 #정답데이터
 answer_8601 = [
-    {'input' : [[10]], 'output' : ["pd.DataFrame({'Apples' : [30, 34, 21,22,54, 23, 43], 'Bananas' : [21, 12, 43, 23, 33, 56,23]})"
+    {'input' : [[10]], 'output' : ["df_answer = pd.DataFrame({'Apples' : [30, 34, 21,22,54, 23, 43], 'Bananas' : [21, 12, 43, 23, 33, 56,23]})"
                                   ]}
 ]
 #이미지
