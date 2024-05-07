@@ -4397,41 +4397,47 @@ answer_8583 = [
                                   "A_ylabel = plt.ylabel('노령인구 백분율(%)')", 
                                   "plt.show()"                                   ]}
 ]
-### 판다스 평가 예시 문제1 - 데이터 프레임 추가하기 ###
 
-fruits = pd.DataFrame({'Apples' : [30], 'Bananas' : [21]})
-fruits_html = fruits.to_html(max_rows = 5, max_cols = 5)
-question_8601 = f'''
-Apples 열에는 30, Bananas 열에는 21 값이 있는 데이터 프레임을 df에 만들어봅시다.
-<p>예시 </p>
-{fruits_html}
+
+### DPAA 문제
+#8601 데이터 프레임 만들기
+table_8601 = pd.DataFrame({'Apples' : [30, 34, 21,22,54, 23, 43], 'Bananas' : [21, 12, 43, 23, 33, 56,23]})
+table_html_8601 = table_8601.to_html(max_rows = 10, max_cols = 10)
+question_8601 =f''' <h2 style = "background-color:yellow; ">Description</h2>
+<p>Let's create a data frame for the df variable by entering </p>
+<p>30, 34, 21, 22, 54, 23, 43 in the Apples column and 21, 12, 43, 23, 33, 56, 23 in the Bananas column.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> example </h2>
+<p>{table_html_8601}<p>
+</div>
 '''
 #정답데이터
 answer_8601 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.DataFrame({",
-                                   "    'Apples' : [30],",
-                                   "    'Bananas' : [21]",
-                                   "})"]}
+    {'input' : [[10]], 'output' : ["pd.DataFrame({'Apples' : [30, 34, 21,22,54, 23, 43], 'Bananas' : [21, 12, 43, 23, 33, 56,23]})"
+                                  ]}
 ]
 #이미지
 img_8601 =''
 
-### 판다스 평가 예시 문제2 - 외부데이터 데이터프레임으로 불러오기 ###
-
-readcsv = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')
-readcsv_html = readcsv.to_html(max_rows = 5, max_cols = 5)
-question_8602 = f'''
-read_csv로 데이터프레임을 불러옵시다.
-<p>예시 </p>
-{readcsv_html}
+###8602 외부데이터 불러와서 데이터 프레임 만들기
+table_8602 = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')
+table_html_8602 = table_8602.to_html(max_rows = 10, max_cols = 10)
+question_8602 =f''' <h2 style = "background-color:yellow; ">Description</h2>
+<p>Let's import the checkup.csv file in the csv_file folder into a data frame in the df variable.</p>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/checkup.csv")</h3>
+<HR>
+<div style = "float:left;width:50%">
+<h2> example </h2>
+<p>{table_html_8602}<p>
+</div>
 '''
 #정답데이터
 answer_8602 = [
-    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/babybreak.csv')"]}
+    {'input' : [[10]], 'output' : ["df_answer = pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')"]}
 ]
 #이미지
 img_8602 =''
-#메타데이터
 
 ### 판다스 평가 예시 문제3 - groupby ###
 
