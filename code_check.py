@@ -1207,6 +1207,10 @@ def table_check(py) :
       global table_count
       table_count = 0
       df_html_color = df.style.applymap(table_compare, df_answer = df_answer).to_html().replace('<table', '<table class = "dataframe"')
+      pd.set_option('display.max_rows', 10)
+      pd.set_option('display.max_columns', 10)
+      pd.options.display.float_format = "{:.2f}".format
+
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
           <div style="float:left;width:50%">
