@@ -4614,11 +4614,109 @@ answer_8609 = [
 ]
 img_8609 =''
 
+##8610 문제
+table_8610 = pd.read_csv("/content/PAAinJN/csv_file/movie_audience.csv")
+table_html_8610 = table_8610.to_html(max_rows = 10, max_cols = 5)
+pre_table_8610 = table_8610.loc[:,['movie', 'audiences']]
+pre_table_html_8610 = pre_table_8610.to_html(max_rows = 10, max_cols = 5)
+question_8610 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/movie_audience.csv")</h3>
+<p>Let's save only 'movie' and 'audience' in the movie_audience.csv file in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8610}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8610}
+</div>
+'''
+answer_8610 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/movie_audience.csv')",
+                              "df_answer = data.loc[:,['movie', 'audiences']]"]}
+]
+img_8610 =''
 
+##8611 문제
+table_8611 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8611 = table_8611.to_html(max_rows = 10, max_cols = 10)
+pre_table_8611 = table_8611.iloc[:,1:]
+pre_table_html_8611 = pre_table_8611.to_html(max_rows = 10, max_cols = 10)
+question_8611 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's save the value in the csv file except for the day column in the bike_seoul.csv file in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8611}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8611}
+</div>
+'''
+answer_8611 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = data.iloc[:,1:]"]}
+]
+img_8611 =''
 
+##8612문제
+table_8612 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8612 = table_8612.to_html(max_rows = 10, max_cols = 10)
+table_8612 = table_8612.iloc[:,1:]
+pre_table_8612 = (table_8612-table_8612.min()) / (table_8612.max() - table_8612.min())
+pre_table_html_8612 = pre_table_8612.to_html(max_rows = 10, max_cols = 10)
+question_8612 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>1. Excludes column 'day'.</p>
+<p>2. Each value is converted to a value between 0 and 1 and stored in the resultant df.</p>
+<p>(value - min) / (max - min)</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8612}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8612}
+</div>
+'''
+answer_8612 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                               "data = data.iloc[:,1:]",
+                              "df_answer = (data-data.min()) / (data.max() - data.min())"]}
+]
+img_8612 =''
 
-
-
+##8613 문제
+table_8613 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8613 = table_8613.to_html(max_rows = 10, max_cols = 10)
+table_8613 = table_8613.iloc[:,1:]
+pre_table_8613 = (table_8613-table_8613.mean()) / (table_8613.std())
+pre_table_html_8613 = pre_table_8613.to_html(max_rows = 10, max_cols = 10)
+question_8613 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>1. Excludes column 'day'.</p>
+<p>2. Normalize each value and store it in df.</p>
+<p>(value -mean) / (std)</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8613}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8613}
+</div>
+'''
+answer_8613 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                               "data = data.iloc[:,1:]",
+                               "df_answer = (data-data.mean()) / (data.std())"]}
+]
+img_8613 =''
 
 
 #메타데이터
@@ -4788,6 +4886,8 @@ test_set = [
     {'test_file' : '_8607.py', 'answer' : answer_8607, 'question' : question_8607, 'img' : img_8607}, 
     {'test_file' : '_8608.py', 'answer' : answer_8608, 'question' : question_8608, 'img' : img_8608}, 
     {'test_file' : '_8609.py', 'answer' : answer_8609, 'question' : question_8609, 'img' : img_8609}, 
-    # {'test_file' : '_8610.py', 'answer' : answer_8610, 'question' : question_8610, 'img' : img_8610},   
-    # {'test_file' : '_8620.py', 'answer' : answer_8620, 'question' : question_8620, 'img' : img_8620},   
+    {'test_file' : '_8600.py', 'answer' : answer_8610, 'question' : question_8610, 'img' : img_8610}, 
+    {'test_file' : '_8611.py', 'answer' : answer_8611, 'question' : question_8611, 'img' : img_8611}, 
+    {'test_file' : '_8612.py', 'answer' : answer_8612, 'question' : question_8612, 'img' : img_8612}, 
+    {'test_file' : '_8613.py', 'answer' : answer_8613, 'question' : question_8613, 'img' : img_8613}, 
 ]
