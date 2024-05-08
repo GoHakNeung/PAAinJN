@@ -4739,6 +4739,8 @@ question_8614 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 answer_8614 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
                               "df_answer = data[data['rent']>180000]"]}
+]
+
 ##8615 문제
 table_8615 = pd.read_csv("/content/PAAinJN/csv_file/checkup.csv")
 table_html_8615 = table_8615.to_html(max_rows = 10, max_cols = 10)
