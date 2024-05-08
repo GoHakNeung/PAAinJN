@@ -4718,6 +4718,75 @@ answer_8613 = [
 ]
 img_8613 =''
 
+##8614 문제
+table_8614 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")
+table_html_8614 = table_8614.to_html(max_rows = 10, max_cols = 10)
+pre_table_8614 = table_8614[table_8614['rent']>180000]
+pre_table_html_8614 = pre_table_8614.to_html(max_rows = 10, max_cols = 10)
+question_8614 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul.csv")</h3>
+<p>Let's save a value with a 'rent' value greater than 180000 in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8614}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8614}
+</div>
+'''
+answer_8614 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
+                              "df_answer = data[data['rent']>180000]"]}
+##8615 문제
+table_8615 = pd.read_csv("/content/PAAinJN/csv_file/checkup.csv")
+table_html_8615 = table_8615.to_html(max_rows = 10, max_cols = 10)
+pre_table_8615 = table_8615[table_8615['성별']=='남']
+pre_table_html_8615 = pre_table_8615.to_html(max_rows = 10, max_cols = 10)
+question_8615 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/checkup.csv")</h3>
+<p>Let's save the value with '성별' as '남' in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8615}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8615}
+</div>
+'''
+answer_8615 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/checkup.csv')",
+                              "df_answer = data[data['성별']=='남']"]}
+]
+img_8615 =''  
+
+##8616 문제
+table_8616 = pd.read_csv("/content/PAAinJN/csv_file/missing_data.csv")
+table_html_8616 = table_8616.to_html(max_rows = 10, max_cols = 10)
+pre_table_8616 = table_8616.fillna(value = table_8616['D'].mean())
+pre_table_html_8616 = pre_table_8616.to_html(max_rows = 10, max_cols = 10)
+question_8616 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_data.csv")</h3>
+<p>Let's fill in the missing values in the data with the average of column D and save it to df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8616}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8616}
+</div>
+'''
+answer_8616 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_data.csv')",
+                              "df_answer = data.fillna(value = data['D'].mean()"]}
+]
+
+
 
 #메타데이터
 test_set = [
@@ -4890,4 +4959,8 @@ test_set = [
     {'test_file' : '_8611.py', 'answer' : answer_8611, 'question' : question_8611, 'img' : img_8611}, 
     {'test_file' : '_8612.py', 'answer' : answer_8612, 'question' : question_8612, 'img' : img_8612}, 
     {'test_file' : '_8613.py', 'answer' : answer_8613, 'question' : question_8613, 'img' : img_8613}, 
+
+    {'test_file' : '_8614.py', 'answer' : answer_8614, 'question' : question_8614, 'img' : img_8614}, 
+    {'test_file' : '_8615.py', 'answer' : answer_8615, 'question' : question_8615, 'img' : img_8615}, 
+    {'test_file' : '_8616.py', 'answer' : answer_8616, 'question' : question_8616, 'img' : img_8616},   
 ]
