@@ -4786,9 +4786,146 @@ question_8616 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 '''
 answer_8616 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_data.csv')",
-                              "df_answer = data.fillna(value = data['D'].mean()"]}
+                              "df_answer = data.fillna(value = data['D'].mean())"]}
 ]
 img_8616 =''
+
+##8617 문제
+table_8617 = pd.read_csv("/content/PAAinJN/csv_file/missing_data.csv")
+table_html_8617 = table_8617.to_html(max_rows = 10, max_cols = 10)
+pre_table_8617 = table_8617.dropna()
+pre_table_html_8617 = pre_table_8617.to_html(max_rows = 10, max_cols = 10)
+question_8617 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/missing_data.csv")</h3>
+<p>Let's remove the missing value and save it to df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8617}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8617}
+</div>
+'''
+answer_8617 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_data.csv')",
+                              "df_answer = data.dropna()"]}
+]
+img_8617 =''
+
+##8618 문제
+table1_8618 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul_1to6.csv")
+table2_8618 = pd.read_csv("/content/PAAinJN/csv_file/bike_seoul_7to12.csv")
+table1_html_8618 = table1_8618.to_html(max_rows = 5, max_cols = 10)
+table2_html_8618 = table2_8618.to_html(max_rows = 5, max_cols = 10)
+
+pre_table_8618 = pd.concat([table1_8618, table2_8618])
+pre_table_html_8618 = pre_table_8618.to_html(max_rows = 10, max_cols = 10)
+question_8618 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul_1to6.csv")</h3>
+<h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/bike_seoul_7to12.csv")</h3>
+<p>Let's combine data from January to June and data from July to December into one data frame and store it in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table1_html_8618}<p>
+<p>{table2_html_8618}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8618}
+</div>
+'''
+answer_8618 = [
+    {'input' : [], 'output' : ["data1=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul_1to6.csv')",
+                               "data2=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul_7to12.csv')",
+                              "df_answer = pd.concat([data1, data2])"]}
+]
+img_8618 =''
+
+##8619문제
+table1_8619 = pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")
+table2_8619 = pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")
+table1_html_8619 = table1_8619.to_html(max_rows = 10, max_cols = 5)
+table2_html_8619 = table2_8619.to_html(max_rows = 10, max_cols = 5)
+
+pre_table_8619 = pd.merge(table1_8619, table2_8619, on = ['key1', 'key2'])
+pre_table_html_8619 = pre_table_8619.to_html(max_rows = 10, max_cols = 10)
+question_8619 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data1=pd.read_csv("/content/PAAinJN/csv_file/merge1.csv")</h3>
+<h3 = "white-space: pre-wrap;">data2=pd.read_csv("/content/PAAinJN/csv_file/merge2.csv")</h3>
+<p>Let's combine data1 and data2 around key1 and key2 and store them in df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table1_html_8619}<p>
+<p>{table2_html_8619}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8619}
+</div>
+'''
+answer_8619 = [
+    {'input' : [], 'output' : ["data1=pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')",
+                               "data2=pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')",
+                              "df_answer = data. pd.merge(table1_8619, table2_8619, on = ['key1', 'key2'])"]}
+]
+img_8619 =''
+
+##8620문제
+table_8620 = pd.read_pickle("/content/PAAinJN/csv_file/multiindex.pkl")
+table_html_8620 = table_8620.to_html(max_rows = 10, max_cols = 10)
+
+pre_table_8620 = table_8620.stack()
+pre_table_html_8620 = pre_table_8620.to_frame().to_html(max_rows = 10, max_cols = 10)
+question_8620 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/multiindex.pkl")</h3>
+<p>Let's stack the data and store it in the df.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8620}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8620}
+</div>
+'''
+answer_8620 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/multiindex.pkl')",
+                              "df_answer = data.stack()"]}
+]
+img_8620 =''
+
+##8621문제
+table_8621 = pd.read_csv('/content/PAAinJN/csv_file/pivot_table.csv')
+table_html_8621 = table_8621.to_html(max_rows = 10, max_cols = 10)
+
+pre_table_8621 = pd.pivot_table(table_8621, values = 'D', index = ['A', 'B'], columns = ['C'])
+pre_table_html_8621 = pre_table_8621.to_html(max_rows = 10, max_cols = 10)
+question_8621 = f''' <h2 style = "background-color:yellow; ">Description</h2>
+<h3 = "white-space: pre-wrap;">data=pd.read_csv("/content/PAAinJN/csv_file/pivot_table.csv")</h3>
+<p>1. Let's make a pivot table of data and store it in df.</p>
+<p>2. Index columns 'A' and 'B'.</p>
+<p>3. Column 'C' as column.</p>
+<p>4. Let 'D' column be value.</p>
+<HR>
+<div style = "float:left;width:50%">
+<h2> Data before preprocessing </h2>
+<p>{table_html_8621}<p>
+</div>
+<div style = "float:right;width:50%">
+<h2> Data after preprocessing </h2>
+{pre_table_html_8621}
+</div>
+'''
+answer_8621 = [
+    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/pivot_table.csv')",
+                              "df_answer =pd.pivot_table(table_8621, values = 'D', index = ['A', 'B'], columns = ['C'])"]}
+]
+img_8621 =''
 
 
 
@@ -4963,8 +5100,12 @@ test_set = [
     {'test_file' : '_8611.py', 'answer' : answer_8611, 'question' : question_8611, 'img' : img_8611}, 
     {'test_file' : '_8612.py', 'answer' : answer_8612, 'question' : question_8612, 'img' : img_8612}, 
     {'test_file' : '_8613.py', 'answer' : answer_8613, 'question' : question_8613, 'img' : img_8613}, 
-
     {'test_file' : '_8614.py', 'answer' : answer_8614, 'question' : question_8614, 'img' : img_8614}, 
     {'test_file' : '_8615.py', 'answer' : answer_8615, 'question' : question_8615, 'img' : img_8615}, 
     {'test_file' : '_8616.py', 'answer' : answer_8616, 'question' : question_8616, 'img' : img_8616},   
+    {'test_file' : '_8617.py', 'answer' : answer_8617, 'question' : question_8617, 'img' : img_8617}, 
+    {'test_file' : '_8618.py', 'answer' : answer_8618, 'question' : question_8618, 'img' : img_8618}, 
+    {'test_file' : '_8619.py', 'answer' : answer_8619, 'question' : question_8619, 'img' : img_8619}, 
+    {'test_file' : '_8620.py', 'answer' : answer_8620, 'question' : question_8620, 'img' : img_8620}, 
+    {'test_file' : '_8621.py', 'answer' : answer_8621, 'question' : question_8621, 'img' : img_8621},     
 ]
