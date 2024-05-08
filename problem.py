@@ -4740,6 +4740,7 @@ answer_8614 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/bike_seoul.csv')",
                               "df_answer = data[data['rent']>180000]"]}
 ]
+img_8614 =''
 
 ##8615 문제
 table_8615 = pd.read_csv("/content/PAAinJN/csv_file/checkup.csv")
@@ -4787,6 +4788,7 @@ answer_8616 = [
     {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/missing_data.csv')",
                               "df_answer = data.fillna(value = data['D'].mean()"]}
 ]
+img_8616 =''
 
 
 
