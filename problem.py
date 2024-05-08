@@ -4870,7 +4870,7 @@ question_8619 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 answer_8619 = [
     {'input' : [], 'output' : ["data1=pd.read_csv('/content/PAAinJN/csv_file/merge1.csv')",
                                "data2=pd.read_csv('/content/PAAinJN/csv_file/merge2.csv')",
-                              "df_answer = data. pd.merge(table1_8619, table2_8619, on = ['key1', 'key2'])"]}
+                              "df_answer = pd.merge(table1_8619, table2_8619, on = ['key1', 'key2'])"]}
 ]
 img_8619 =''
 
