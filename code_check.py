@@ -1309,22 +1309,14 @@ def table_check(py) :
       df_answer.fillna(value = random_number, inplace = True)
     #NAN이 있어도 평가하기 위해 추가한 코드
     
+   
     df_numpy = df.to_numpy()
     df_answer_numpy = df_answer.to_numpy()
-    if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.columns, df_answer.columns) and np.array_equal(df.index, df_answer.index) :
+    if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.index, df_answer.index) :
       print(tc_green+'Right answer.'+reset)
     else :
-      print(tc_red+'Wrong answer'+reset)
-      table_feedback(df, df_answer)
-###
-    
-    # df_numpy = df.to_numpy()
-    # df_answer_numpy = df_answer.to_numpy()
-    # if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.index, df_answer.index) :
-    #   print(tc_green+'Right answer.'+reset)
-    # else :
-    #   print(tc_red+'Wrong answer.'+reset)
-    #   table_series_feedback(df, df_answer)
+      print(tc_red+'Wrong answer.'+reset)
+      table_series_feedback(df, df_answer)
 
   elif df == df_answer and df !='' :
     output_html = f'''
