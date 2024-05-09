@@ -1206,7 +1206,7 @@ def table_check(py) :
     if df.shape == df_answer.shape : 
       global table_count
       table_count = 0     
-      df_answer_html = df.style.format(precision = 2). to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
+      df_answer_html = df_answer.style.format(precision = 2). to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       df_html_color = df.style.format(precision=2).applymap(table_compare, df_answer = df_answer).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       output_html_color = f'''
       <div style="display: flex; flex-direction: row;">
@@ -1253,15 +1253,76 @@ def table_check(py) :
     else :
       print(tc_red+'Wrong answer'+reset)
       table_feedback(df, df_answer)
+###
+  # elif type(df) == pd.core.series.Series and type(df_answer) == pd.core.series.Series :
 
+###
   elif type(df) == pd.core.series.Series and type(df_answer) == pd.core.series.Series :
+    Question('<h2 style = "background-color:yellow">Check the results</h2>')
+  # 결과 자가 평가
+    # df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5, show_dimensions = True)
+    # df_html = df.to_html(max_cols = 5, max_rows =5, show_dimensions = True)
+    
+    if df.shape == df_answer.shape : 
+      global table_count
+      table_count = 0     
+      df_answer_html = df_answer.style.format(precision = 2).to_frame().to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
+      df_html_color = df.style.format(precision=2).to_frame().applymap(table_compare, df_answer = df_answer).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
+      output_html_color = f'''
+      <div style="display: flex; flex-direction: row;">
+          <div style="float:left;width:50%">
+          <h3>The left side shows the output produced by your code.</h3>
+          <p >{df_html_color}</p>
+          </div>
+          <div style="float:right;width:50%">
+          <h3>The right side shows the output produced by model answer.</h3>
+          <p >{df_answer_html}</p>
+          </div>
+      </div>
+      '''      
+
+      Question(output_html_color)
+    else : 
+      df_html = df.to_frame().to_html(max_cols =5, max_rows = 5)
+      df_answer_html = df_answer.to_html(max_cols = 5, max_rows =5)
+      output_html = f'''
+      <div style="display: flex; flex-direction: row;">
+          <div style="float:left;width:50%">
+          <h3>The left side shows the output produced by your code.</h3>
+          <p >{df_html}</p>
+          </div>
+          <div style="float:right;width:50%">
+          <h3>The right side shows the output produced by model answer.</h3>
+          <p >{df_answer_html}</p>
+          </div>
+      </div>
+      '''      
+      Question(output_html)
+    Question('<HR>')
+# 자동 평가
+    #NAN이 있어도 평가하기 위해 추가한 코드
+    if df_answer.isna().to_numpy().sum() : 
+      random_number = random.randint(1, 20141112)
+      df.fillna(value = random_number, inplace = True)
+      df_answer.fillna(value = random_number, inplace = True)
+    #NAN이 있어도 평가하기 위해 추가한 코드
+    
     df_numpy = df.to_numpy()
     df_answer_numpy = df_answer.to_numpy()
-    if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.index, df_answer.index) :
+    if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.columns, df_answer.columns) and np.array_equal(df.index, df_answer.index) :
       print(tc_green+'Right answer.'+reset)
     else :
-      print(tc_red+'Wrong answer.'+reset)
-      table_series_feedback(df, df_answer)
+      print(tc_red+'Wrong answer'+reset)
+      table_feedback(df, df_answer)
+###
+    
+    # df_numpy = df.to_numpy()
+    # df_answer_numpy = df_answer.to_numpy()
+    # if np.array_equal(df_numpy, df_answer_numpy) and np.array_equal(df.index, df_answer.index) :
+    #   print(tc_green+'Right answer.'+reset)
+    # else :
+    #   print(tc_red+'Wrong answer.'+reset)
+    #   table_series_feedback(df, df_answer)
 
   elif df == df_answer and df !='' :
     output_html = f'''
