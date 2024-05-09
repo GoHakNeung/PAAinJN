@@ -1150,6 +1150,8 @@ table_count = 0
 def table_compare(x, df_answer, color='#fffacd') :
   global table_count
   # print(count)
+  if type(df_answer) == pd.core.series.Series : 
+    df_answer = df_answer.to_frame()
   row = df_answer.shape[0]
   col = df_answer.shape[1]
   new_row = table_count % row
