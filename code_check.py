@@ -1264,7 +1264,7 @@ def table_check(py) :
     # df_html = df.to_html(max_cols = 5, max_rows =5, show_dimensions = True)
     
     if df.shape == df_answer.shape : 
-      global table_count
+      # global table_count
       table_count = 0     
       df_answer_html = df_answer.style.format(precision = 2).to_frame().to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
       df_html_color = df.style.format(precision=2).to_frame().applymap(table_compare, df_answer = df_answer).to_html(max_rows = 5, max_columns = 5).replace('<table', '<table class = "dataframe"')
