@@ -4894,7 +4894,7 @@ question_8620 = f''' <h2 style = "background-color:yellow; ">Description</h2>
 </div>
 '''
 answer_8620 = [
-    {'input' : [], 'output' : ["data=pd.read_csv('/content/PAAinJN/csv_file/multiindex.pkl')",
+    {'input' : [], 'output' : ["data=pd.read_pickle('/content/PAAinJN/csv_file/multiindex.pkl')",
                               "df_answer = data.stack()"]}
 ]
 img_8620 =''
